@@ -285,13 +285,13 @@ This is a production system for UIDAI. All changes must:
 
 ## 📄 License
 
-Proprietary - UIDAI Internal Use Only
+MIT License - Copyright (c) 2026 [Mayank Sharma](https://mayyanks.app)
 
 ## 👥 Authors
 
+- **Developer**: [Mayank Sharma](https://mayyanks.app), IIT Jodhpur
 - **System Design**: Advanced Analytics Team
 - **Implementation**: Data Science Division
-- **Validation**: Policy & Compliance Unit
 
 ## 🆘 Support
 

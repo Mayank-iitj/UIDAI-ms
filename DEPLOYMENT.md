@@ -29,6 +29,19 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
+## ☁️ Cloud Deployment (Streamlit)
+
+The easiest way to deploy this system for the hackathon is using **Streamlit Cloud**:
+
+1. Fork this repository or push it to your own GitHub.
+2. Sign up at [share.streamlit.io](https://share.streamlit.io/).
+3. Click **"New app"**.
+4. Select your repository (`UIDAI-ms`).
+5. Set "Main file path" to `streamlit_app.py`.
+6. Click **"Deploy"**.
+
+This will launch a live dashboard showcasing your intelligence reports and visualizations!
+
 ### 2. Configuration
 
 Edit [`config/config.yaml`](file:///C:/Users/MS/.gemini/antigravity/scratch/uidai-intelligence-system/config/config.yaml):
