@@ -290,6 +290,8 @@ MIT License - Copyright (c) 2026 [Mayank Sharma](https://mayyanks.app)
 ## 👥 Authors
 
 - **Developer**: [Mayank Sharma](https://mayyanks.app), IIT Jodhpur
+  - 📧 b24bs1555@iitj.ac.in
+  - 📧 ms1591934@gmail.com
 - **System Design**: Advanced Analytics Team
 - **Implementation**: Data Science Division
 
