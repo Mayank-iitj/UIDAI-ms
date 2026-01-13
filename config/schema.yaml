@@ -1,0 +1,127 @@
+# UIDAI Data Schema Validation Rules
+
+# Expected columns and their data types
+columns:
+  date:
+    type: string
+    nullable: false
+    description: "Enrollment date in DD-MM-YYYY format"
+    
+  state:
+    type: string
+    nullable: false
+    description: "Indian state or union territory name"
+    
+  district:
+    type: string
+    nullable: false
+    description: "District name within the state"
+    
+  pincode:
+    type: integer
+    nullable: false
+    description: "6-digit PIN code"
+    constraints:
+      min: 100000
+      max: 999999
+    
+  age_0_5:
+    type: integer
+    nullable: false
+    description: "Enrollment count for age group 0-5 years"
+    constraints:
+      min: 0
+      max: 100000
+    
+  age_5_17:
+    type: integer
+    nullable: false
+    description: "Enrollment count for age group 5-17 years"
+    constraints:
+      min: 0
+      max: 100000
+    
+  age_18_plus:
+    type: integer
+    nullable: false
+    description: "Enrollment count for age group 18+ years"
+    constraints:
+      min: 0
+      max: 100000
+
+# Data quality rules
+quality_rules:
+  # No negative values in age columns
+  no_negative_enrollments:
+    description: "All age group columns must be >= 0"
+    
+  # Total enrollment should be sum of age groups
+  total_equals_sum:
+    description: "Total enrollment = age_0_5 + age_5_17 + age_18_plus"
+    tolerance: 0
+    
+  # Date should be valid and within reasonable range
+  valid_date_range:
+    description: "Date should be between 2010-01-01 and current date"
+    min_date: "2010-01-01"
+    
+  # No duplicate records
+  no_duplicates:
+    description: "No duplicate combinations of date, state, district, pincode"
+    unique_keys:
+      - date
+      - state
+      - district
+      - pincode
+
+# Expected value ranges (for anomaly detection)
+expected_ranges:
+  daily_enrollment_per_pin:
+    typical_min: 0
+    typical_max: 1000
+    extreme_max: 5000
+    
+  monthly_enrollment_per_district:
+    typical_min: 100
+    typical_max: 50000
+    extreme_max: 200000
+
+# Reference data
+reference:
+  valid_states:
+    - "Andhra Pradesh"
+    - "Arunachal Pradesh"
+    - "Assam"
+    - "Bihar"
+    - "Chhattisgarh"
+    - "Goa"
+    - "Gujarat"
+    - "Haryana"
+    - "Himachal Pradesh"
+    - "Jharkhand"
+    - "Karnataka"
+    - "Kerala"
+    - "Madhya Pradesh"
+    - "Maharashtra"
+    - "Manipur"
+    - "Meghalaya"
+    - "Mizoram"
+    - "Nagaland"
+    - "Odisha"
+    - "Punjab"
+    - "Rajasthan"
+    - "Sikkim"
+    - "Tamil Nadu"
+    - "Telangana"
+    - "Tripura"
+    - "Uttar Pradesh"
+    - "Uttarakhand"
+    - "West Bengal"
+    - "Andaman and Nicobar Islands"
+    - "Chandigarh"
+    - "Dadra and Nagar Haveli and Daman and Diu"
+    - "Delhi"
+    - "Jammu and Kashmir"
+    - "Ladakh"
+    - "Lakshadweep"
+    - "Puducherry"

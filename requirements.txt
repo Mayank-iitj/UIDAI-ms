@@ -1,0 +1,51 @@
+# Core Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+polars>=0.19.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.17.0
+folium>=0.14.0
+
+# Machine Learning & Statistics
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+lightgbm>=4.0.0
+scipy>=1.11.0
+statsmodels>=0.14.0
+
+# Data Quality & Validation (Optional - only install if needed)
+# great-expectations>=0.18.0  # Commented out - Python 3.14 compatibility issues
+# ydata-profiling>=4.0.0  # Replacement for pandas-profiling (optional)
+
+# Dashboard
+streamlit>=1.28.0
+dash>=2.14.0
+dash-bootstrap-components>=1.5.0
+
+# Model Explainability
+shap>=0.43.0
+
+# Utilities
+pyyaml>=6.0
+python-dateutil>=2.8.2
+tqdm>=4.66.0
+joblib>=1.3.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Jupyter & Notebooks
+jupyter>=1.0.0
+ipykernel>=6.25.0
+ipywidgets>=8.1.0
+
+# PDF Generation
+reportlab>=4.0.0

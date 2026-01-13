@@ -1,0 +1,4269 @@
+{
+  "metadata": {
+    "generated_at": "2026-01-13T10:49:33.369630",
+    "system_version": "1.0.0",
+    "data_records": 1006029,
+    "analysis_period": {
+      "start": "2025-03-02T00:00:00",
+      "end": "2025-12-31T00:00:00"
+    }
+  },
+  "data_governance": {
+    "timestamp": "2026-01-13T10:47:42.970644",
+    "total_records": 1006029,
+    "schema_validation": {
+      "is_valid": true,
+      "issues": []
+    },
+    "dri": {
+      "dri_score": 1.0,
+      "assessment": "PASS",
+      "components": {
+        "completeness": 1.0,
+        "consistency": 1.0,
+        "validity": 1.0
+      },
+      "threshold": 0.7
+    },
+    "data_quality": {
+      "missing_values": {
+        "total": 0,
+        "percentage": 0.0,
+        "by_column": {}
+      },
+      "duplicate_records": 22957,
+      "extreme_values": 20259
+    },
+    "recommendations": [
+      "Data quality is satisfactory for analysis"
+    ]
+  },
+  "descriptive_analytics": {
+    "temporal_trends": [
+      {
+        "year_month": "2025-03",
+        "age_0_5": 5367,
+        "age_5_17": 7407,
+        "age_18_greater": 3808,
+        "total_enrollment": 16582,
+        "age_0_5_mom_change": null,
+        "age_0_5_yoy_change": null,
+        "age_5_17_mom_change": null,
+        "age_5_17_yoy_change": null,
+        "age_18_greater_mom_change": null,
+        "age_18_greater_yoy_change": null,
+        "total_enrollment_mom_change": null,
+        "total_enrollment_yoy_change": null,
+        "total_ma_3m": NaN,
+        "total_ma_6m": NaN
+      },
+      {
+        "year_month": "2025-04",
+        "age_0_5": 141154,
+        "age_5_17": 91371,
+        "age_18_greater": 24913,
+        "total_enrollment": 257438,
+        "age_0_5_mom_change": 2530.0354015278554,
+        "age_0_5_yoy_change": null,
+        "age_5_17_mom_change": 1133.5763466990684,
+        "age_5_17_yoy_change": null,
+        "age_18_greater_mom_change": 554.2279411764706,
+        "age_18_greater_yoy_change": null,
+        "total_enrollment_mom_change": 1452.514775057291,
+        "total_enrollment_yoy_change": null,
+        "total_ma_3m": NaN,
+        "total_ma_6m": NaN
+      },
+      {
+        "year_month": "2025-05",
+        "age_0_5": 95342,
+        "age_5_17": 71690,
+        "age_18_greater": 16584,
+        "total_enrollment": 183616,
+        "age_0_5_mom_change": -32.45533247375207,
+        "age_0_5_yoy_change": null,
+        "age_5_17_mom_change": -21.53965700276893,
+        "age_5_17_yoy_change": null,
+        "age_18_greater_mom_change": -33.432344559065555,
+        "age_18_greater_yoy_change": null,
+        "total_enrollment_mom_change": -28.675642290570934,
+        "total_enrollment_yoy_change": null,
+        "total_ma_3m": 152545.33333333334,
+        "total_ma_6m": NaN
+      },
+      {
+        "year_month": "2025-06",
+        "age_0_5": 98943,
+        "age_5_17": 99911,
+        "age_18_greater": 16880,
+        "total_enrollment": 215734,
+        "age_0_5_mom_change": 3.7769293700572693,
+        "age_0_5_yoy_change": null,
+        "age_5_17_mom_change": 39.36532291811967,
+        "age_5_17_yoy_change": null,
+        "age_18_greater_mom_change": 1.7848528702363753,
+        "age_18_greater_yoy_change": null,
+        "total_enrollment_mom_change": 17.491939700243986,
+        "total_enrollment_yoy_change": null,
+        "total_ma_3m": 218929.33333333334,
+        "total_ma_6m": NaN
+      },
+      {
+        "year_month": "2025-07",
+        "age_0_5": 318352,
+        "age_5_17": 263333,
+        "age_18_greater": 35183,
+        "total_enrollment": 616868,
+        "age_0_5_mom_change": 221.75292845375617,
+        "age_0_5_yoy_change": null,
+        "age_5_17_mom_change": 163.56757514187626,
+        "age_5_17_yoy_change": null,
+        "age_18_greater_mom_change": 108.43009478672987,
+        "age_18_greater_yoy_change": null,
+        "total_enrollment_mom_change": 185.93916582458027,
+        "total_enrollment_yoy_change": null,
+        "total_ma_3m": 338739.3333333333,
+        "total_ma_6m": NaN
+      },
+      {
+        "year_month": "2025-09",
+        "age_0_5": 995612,
+        "age_5_17": 465401,
+        "age_18_greater": 14866,
+        "total_enrollment": 1475879,
+        "age_0_5_mom_change": 212.7393576921144,
+        "age_0_5_yoy_change": null,
+        "age_5_17_mom_change": 76.73478067693758,
+        "age_5_17_yoy_change": null,
+        "age_18_greater_mom_change": -57.74663900179065,
+        "age_18_greater_yoy_change": null,
+        "total_enrollment_mom_change": 139.2536166570482,
+        "total_enrollment_yoy_change": null,
+        "total_ma_3m": 769493.6666666666,
+        "total_ma_6m": 461019.5
+      },
+      {
+        "year_month": "2025-10",
+        "age_0_5": 562856,
+        "age_5_17": 238958,
+        "age_18_greater": 16106,
+        "total_enrollment": 817920,
+        "age_0_5_mom_change": -43.46633025716845,
+        "age_0_5_yoy_change": null,
+        "age_5_17_mom_change": -48.65546055981831,
+        "age_5_17_yoy_change": null,
+        "age_18_greater_mom_change": 8.341181218888739,
+        "age_18_greater_yoy_change": null,
+        "total_enrollment_mom_change": -44.58082268261829,
+        "total_enrollment_yoy_change": null,
+        "total_ma_3m": 970222.3333333334,
+        "total_ma_6m": 594575.8333333334
+      },
+      {
+        "year_month": "2025-11",
+        "age_0_5": 769156,
+        "age_5_17": 297658,
+        "age_18_greater": 25193,
+        "total_enrollment": 1092007,
+        "age_0_5_mom_change": 36.65235868499226,
+        "age_0_5_yoy_change": null,
+        "age_5_17_mom_change": 24.564986315586836,
+        "age_5_17_yoy_change": null,
+        "age_18_greater_mom_change": 56.41996771389544,
+        "age_18_greater_yoy_change": null,
+        "total_enrollment_mom_change": 33.510245500782474,
+        "total_enrollment_yoy_change": null,
+        "total_ma_3m": 1128602.0,
+        "total_ma_6m": 733670.6666666666
+      },
+      {
+        "year_month": "2025-12",
+        "age_0_5": 560183,
+        "age_5_17": 184655,
+        "age_18_greater": 14820,
+        "total_enrollment": 759658,
+        "age_0_5_mom_change": -27.169130839517596,
+        "age_0_5_yoy_change": null,
+        "age_5_17_mom_change": -37.964039266540794,
+        "age_5_17_yoy_change": null,
+        "age_18_greater_mom_change": -41.17413567260747,
+        "age_18_greater_yoy_change": null,
+        "total_enrollment_mom_change": -30.434695015691293,
+        "total_enrollment_yoy_change": null,
+        "total_ma_3m": 889861.6666666666,
+        "total_ma_6m": 829677.6666666666
+      }
+    ],
+    "geographic_patterns": {
+      "top_states": {
+        "Uttar Pradesh": {
+          "age_0_5": 521045,
+          "age_5_17": 479682,
+          "age_18_greater": 17902,
+          "total_enrollment": 1018629
+        },
+        "Bihar": {
+          "age_0_5": 262875,
+          "age_5_17": 334802,
+          "age_18_greater": 11908,
+          "total_enrollment": 609585
+        },
+        "Madhya Pradesh": {
+          "age_0_5": 367990,
+          "age_5_17": 116381,
+          "age_18_greater": 9599,
+          "total_enrollment": 493970
+        },
+        "West Bengal": {
+          "age_0_5": 275391,
+          "age_5_17": 91396,
+          "age_18_greater": 8510,
+          "total_enrollment": 375297
+        },
+        "Maharashtra": {
+          "age_0_5": 278814,
+          "age_5_17": 82116,
+          "age_18_greater": 8209,
+          "total_enrollment": 369139
+        },
+        "Rajasthan": {
+          "age_0_5": 229780,
+          "age_5_17": 113123,
+          "age_18_greater": 5555,
+          "total_enrollment": 348458
+        },
+        "Gujarat": {
+          "age_0_5": 193031,
+          "age_5_17": 71182,
+          "age_18_greater": 16336,
+          "total_enrollment": 280549
+        },
+        "Assam": {
+          "age_0_5": 141235,
+          "age_5_17": 66085,
+          "age_18_greater": 22877,
+          "total_enrollment": 230197
+        },
+        "Karnataka": {
+          "age_0_5": 179262,
+          "age_5_17": 33863,
+          "age_18_greater": 10110,
+          "total_enrollment": 223235
+        },
+        "Tamil Nadu": {
+          "age_0_5": 182313,
+          "age_5_17": 37227,
+          "age_18_greater": 1249,
+          "total_enrollment": 220789
+        }
+      },
+      "top_districts": [
+        {
+          "state": "Maharashtra",
+          "district": "Thane",
+          "age_0_5": 29092,
+          "age_5_17": 13629,
+          "age_18_greater": 967,
+          "total_enrollment": 43688
+        },
+        {
+          "state": "Bihar",
+          "district": "Sitamarhi",
+          "age_0_5": 20679,
+          "age_5_17": 18856,
+          "age_18_greater": 2697,
+          "total_enrollment": 42232
+        },
+        {
+          "state": "Uttar Pradesh",
+          "district": "Bahraich",
+          "age_0_5": 14674,
+          "age_5_17": 22360,
+          "age_18_greater": 2304,
+          "total_enrollment": 39338
+        },
+        {
+          "state": "West Bengal",
+          "district": "Murshidabad",
+          "age_0_5": 31442,
+          "age_5_17": 4383,
+          "age_18_greater": 86,
+          "total_enrollment": 35911
+        },
+        {
+          "state": "West Bengal",
+          "district": "South 24 Parganas",
+          "age_0_5": 25039,
+          "age_5_17": 8197,
+          "age_18_greater": 304,
+          "total_enrollment": 33540
+        },
+        {
+          "state": "Maharashtra",
+          "district": "Pune",
+          "age_0_5": 24088,
+          "age_5_17": 6536,
+          "age_18_greater": 1139,
+          "total_enrollment": 31763
+        },
+        {
+          "state": "Rajasthan",
+          "district": "Jaipur",
+          "age_0_5": 21436,
+          "age_5_17": 8976,
+          "age_18_greater": 734,
+          "total_enrollment": 31146
+        },
+        {
+          "state": "Karnataka",
+          "district": "Bengaluru",
+          "age_0_5": 20441,
+          "age_5_17": 6732,
+          "age_18_greater": 3807,
+          "total_enrollment": 30980
+        },
+        {
+          "state": "Uttar Pradesh",
+          "district": "Sitapur",
+          "age_0_5": 16237,
+          "age_5_17": 13869,
+          "age_18_greater": 748,
+          "total_enrollment": 30854
+        },
+        {
+          "state": "Bihar",
+          "district": "West Champaran",
+          "age_0_5": 11585,
+          "age_5_17": 18070,
+          "age_18_greater": 783,
+          "total_enrollment": 30438
+        },
+        {
+          "state": "Uttar Pradesh",
+          "district": "Agra",
+          "age_0_5": 16314,
+          "age_5_17": 12691,
+          "age_18_greater": 905,
+          "total_enrollment": 29910
+        },
+        {
+          "state": "Bihar",
+          "district": "East Champaran",
+          "age_0_5": 10147,
+          "age_5_17": 18371,
+          "age_18_greater": 805,
+          "total_enrollment": 29323
+        },
+        {
+          "state": "Bihar",
+          "district": "Muzaffarpur",
+          "age_0_5": 14087,
+          "age_5_17": 14103,
+          "age_18_greater": 665,
+          "total_enrollment": 28855
+        },
+        {
+          "state": "Meghalaya",
+          "district": "East Khasi Hills",
+          "age_0_5": 4258,
+          "age_5_17": 14606,
+          "age_18_greater": 9948,
+          "total_enrollment": 28812
+        },
+        {
+          "state": "West Bengal",
+          "district": "North 24 Parganas",
+          "age_0_5": 21517,
+          "age_5_17": 5741,
+          "age_18_greater": 1348,
+          "total_enrollment": 28606
+        },
+        {
+          "state": "Uttar Pradesh",
+          "district": "Bareilly",
+          "age_0_5": 17187,
+          "age_5_17": 10017,
+          "age_18_greater": 607,
+          "total_enrollment": 27811
+        },
+        {
+          "state": "Bihar",
+          "district": "Gaya",
+          "age_0_5": 6722,
+          "age_5_17": 20244,
+          "age_18_greater": 435,
+          "total_enrollment": 27401
+        },
+        {
+          "state": "West Bengal",
+          "district": "Uttar Dinajpur",
+          "age_0_5": 18397,
+          "age_5_17": 8127,
+          "age_18_greater": 368,
+          "total_enrollment": 26892
+        },
+        {
+          "state": "Uttar Pradesh",
+          "district": "Aligarh",
+          "age_0_5": 13830,
+          "age_5_17": 11776,
+          "age_18_greater": 586,
+          "total_enrollment": 26192
+        },
+        {
+          "state": "Telangana",
+          "district": "Hyderabad",
+          "age_0_5": 19721,
+          "age_5_17": 5600,
+          "age_18_greater": 669,
+          "total_enrollment": 25990
+        }
+      ],
+      "concentration": {
+        "gini_coefficient": 0.767,
+        "interpretation": "High inequality - significant concentration"
+      },
+      "coverage": {
+        "num_states": 55,
+        "num_districts": 985,
+        "num_pincodes": 19463
+      }
+    },
+    "age_demographics": {
+      "overall": {
+        "totals": {
+          "age_0_5": 3546965,
+          "age_5_17": 1720384,
+          "age_18_greater": 168353
+        },
+        "proportions": {
+          "age_0_5": 65.25,
+          "age_5_17": 31.65,
+          "age_18_greater": 3.1
+        },
+        "grand_total": 5435702
+      },
+      "unusual_distributions": [
+        {
+          "category": "child_heavy",
+          "states": {
+            "Andaman & Nicobar Islands": {
+              "child_pct": 100.0
+            },
+            "Andaman and Nicobar Islands": {
+              "child_pct": 100.0
+            },
+            "Dadra & Nagar Haveli": {
+              "child_pct": 100.0
+            },
+            "Daman & Diu": {
+              "child_pct": 100.0
+            },
+            "Daman and Diu": {
+              "child_pct": 100.0
+            }
+          }
+        },
+        {
+          "category": "adult_heavy",
+          "states": {
+            "100000": {
+              "pct_age_18_greater": 99.54
+            },
+            "Meghalaya": {
+              "pct_age_18_greater": 32.15
+            },
+            "Dadra and Nagar Haveli and Daman and Diu": {
+              "pct_age_18_greater": 12.14
+            },
+            "Assam": {
+              "pct_age_18_greater": 9.94
+            },
+            "Mizoram": {
+              "pct_age_18_greater": 8.35
+            }
+          }
+        }
+      ],
+      "state_summary": {
+        "100000": {
+          "age_0_5": 0,
+          "age_5_17": 1,
+          "age_18_greater": 217,
+          "total": 218,
+          "pct_age_0_5": 0.0,
+          "pct_age_5_17": 0.46,
+          "pct_age_18_greater": 99.54,
+          "child_pct": 0.46
+        },
+        "Andaman & Nicobar Islands": {
+          "age_0_5": 109,
+          "age_5_17": 5,
+          "age_18_greater": 0,
+          "total": 114,
+          "pct_age_0_5": 95.61,
+          "pct_age_5_17": 4.39,
+          "pct_age_18_greater": 0.0,
+          "child_pct": 100.0
+        },
+        "Andaman and Nicobar Islands": {
+          "age_0_5": 370,
+          "age_5_17": 27,
+          "age_18_greater": 0,
+          "total": 397,
+          "pct_age_0_5": 93.2,
+          "pct_age_5_17": 6.8,
+          "pct_age_18_greater": 0.0,
+          "child_pct": 100.0
+        },
+        "Andhra Pradesh": {
+          "age_0_5": 112440,
+          "age_5_17": 13746,
+          "age_18_greater": 1495,
+          "total": 127681,
+          "pct_age_0_5": 88.06,
+          "pct_age_5_17": 10.77,
+          "pct_age_18_greater": 1.17,
+          "child_pct": 98.83
+        },
+        "Arunachal Pradesh": {
+          "age_0_5": 1957,
+          "age_5_17": 2236,
+          "age_18_greater": 151,
+          "total": 4344,
+          "pct_age_0_5": 45.05,
+          "pct_age_5_17": 51.47,
+          "pct_age_18_greater": 3.48,
+          "child_pct": 96.52
+        },
+        "Assam": {
+          "age_0_5": 141235,
+          "age_5_17": 66085,
+          "age_18_greater": 22877,
+          "total": 230197,
+          "pct_age_0_5": 61.35,
+          "pct_age_5_17": 28.71,
+          "pct_age_18_greater": 9.94,
+          "child_pct": 90.06
+        },
+        "Bihar": {
+          "age_0_5": 262875,
+          "age_5_17": 334802,
+          "age_18_greater": 11908,
+          "total": 609585,
+          "pct_age_0_5": 43.12,
+          "pct_age_5_17": 54.92,
+          "pct_age_18_greater": 1.95,
+          "child_pct": 98.03999999999999
+        },
+        "Chandigarh": {
+          "age_0_5": 2476,
+          "age_5_17": 211,
+          "age_18_greater": 36,
+          "total": 2723,
+          "pct_age_0_5": 90.93,
+          "pct_age_5_17": 7.75,
+          "pct_age_18_greater": 1.32,
+          "child_pct": 98.68
+        },
+        "Chhattisgarh": {
+          "age_0_5": 82453,
+          "age_5_17": 18769,
+          "age_18_greater": 1997,
+          "total": 103219,
+          "pct_age_0_5": 79.88,
+          "pct_age_5_17": 18.18,
+          "pct_age_18_greater": 1.93,
+          "child_pct": 98.06
+        },
+        "Dadra & Nagar Haveli": {
+          "age_0_5": 22,
+          "age_5_17": 3,
+          "age_18_greater": 0,
+          "total": 25,
+          "pct_age_0_5": 88.0,
+          "pct_age_5_17": 12.0,
+          "pct_age_18_greater": 0.0,
+          "child_pct": 100.0
+        },
+        "Dadra and Nagar Haveli": {
+          "age_0_5": 669,
+          "age_5_17": 71,
+          "age_18_greater": 4,
+          "total": 744,
+          "pct_age_0_5": 89.92,
+          "pct_age_5_17": 9.54,
+          "pct_age_18_greater": 0.54,
+          "child_pct": 99.46000000000001
+        },
+        "Dadra and Nagar Haveli and Daman and Diu": {
+          "age_0_5": 131,
+          "age_5_17": 21,
+          "age_18_greater": 21,
+          "total": 173,
+          "pct_age_0_5": 75.72,
+          "pct_age_5_17": 12.14,
+          "pct_age_18_greater": 12.14,
+          "child_pct": 87.86
+        },
+        "Daman & Diu": {
+          "age_0_5": 20,
+          "age_5_17": 1,
+          "age_18_greater": 0,
+          "total": 21,
+          "pct_age_0_5": 95.24,
+          "pct_age_5_17": 4.76,
+          "pct_age_18_greater": 0.0,
+          "child_pct": 100.0
+        },
+        "Daman and Diu": {
+          "age_0_5": 107,
+          "age_5_17": 13,
+          "age_18_greater": 0,
+          "total": 120,
+          "pct_age_0_5": 89.17,
+          "pct_age_5_17": 10.83,
+          "pct_age_18_greater": 0.0,
+          "child_pct": 100.0
+        },
+        "Delhi": {
+          "age_0_5": 69183,
+          "age_5_17": 22296,
+          "age_18_greater": 3050,
+          "total": 94529,
+          "pct_age_0_5": 73.19,
+          "pct_age_5_17": 23.59,
+          "pct_age_18_greater": 3.23,
+          "child_pct": 96.78
+        },
+        "Goa": {
+          "age_0_5": 1916,
+          "age_5_17": 254,
+          "age_18_greater": 163,
+          "total": 2333,
+          "pct_age_0_5": 82.13,
+          "pct_age_5_17": 10.89,
+          "pct_age_18_greater": 6.99,
+          "child_pct": 93.02
+        },
+        "Gujarat": {
+          "age_0_5": 193031,
+          "age_5_17": 71182,
+          "age_18_greater": 16336,
+          "total": 280549,
+          "pct_age_0_5": 68.8,
+          "pct_age_5_17": 25.37,
+          "pct_age_18_greater": 5.82,
+          "child_pct": 94.17
+        },
+        "Haryana": {
+          "age_0_5": 88042,
+          "age_5_17": 9110,
+          "age_18_greater": 1100,
+          "total": 98252,
+          "pct_age_0_5": 89.61,
+          "pct_age_5_17": 9.27,
+          "pct_age_18_greater": 1.12,
+          "child_pct": 98.88
+        },
+        "Himachal Pradesh": {
+          "age_0_5": 16639,
+          "age_5_17": 661,
+          "age_18_greater": 186,
+          "total": 17486,
+          "pct_age_0_5": 95.16,
+          "pct_age_5_17": 3.78,
+          "pct_age_18_greater": 1.06,
+          "child_pct": 98.94
+        },
+        "Jammu & Kashmir": {
+          "age_0_5": 133,
+          "age_5_17": 22,
+          "age_18_greater": 0,
+          "total": 155,
+          "pct_age_0_5": 85.81,
+          "pct_age_5_17": 14.19,
+          "pct_age_18_greater": 0.0,
+          "child_pct": 100.0
+        },
+        "Jammu And Kashmir": {
+          "age_0_5": 569,
+          "age_5_17": 344,
+          "age_18_greater": 37,
+          "total": 950,
+          "pct_age_0_5": 59.89,
+          "pct_age_5_17": 36.21,
+          "pct_age_18_greater": 3.89,
+          "child_pct": 96.1
+        },
+        "Jammu and Kashmir": {
+          "age_0_5": 39837,
+          "age_5_17": 7656,
+          "age_18_greater": 498,
+          "total": 47991,
+          "pct_age_0_5": 83.01,
+          "pct_age_5_17": 15.95,
+          "pct_age_18_greater": 1.04,
+          "child_pct": 98.96000000000001
+        },
+        "Jharkhand": {
+          "age_0_5": 98551,
+          "age_5_17": 57539,
+          "age_18_greater": 1449,
+          "total": 157539,
+          "pct_age_0_5": 62.56,
+          "pct_age_5_17": 36.52,
+          "pct_age_18_greater": 0.92,
+          "child_pct": 99.08000000000001
+        },
+        "Karnataka": {
+          "age_0_5": 179262,
+          "age_5_17": 33863,
+          "age_18_greater": 10110,
+          "total": 223235,
+          "pct_age_0_5": 80.3,
+          "pct_age_5_17": 15.17,
+          "pct_age_18_greater": 4.53,
+          "child_pct": 95.47
+        },
+        "Kerala": {
+          "age_0_5": 53737,
+          "age_5_17": 18590,
+          "age_18_greater": 2675,
+          "total": 75002,
+          "pct_age_0_5": 71.65,
+          "pct_age_5_17": 24.79,
+          "pct_age_18_greater": 3.57,
+          "child_pct": 96.44
+        },
+        "Ladakh": {
+          "age_0_5": 466,
+          "age_5_17": 133,
+          "age_18_greater": 18,
+          "total": 617,
+          "pct_age_0_5": 75.53,
+          "pct_age_5_17": 21.56,
+          "pct_age_18_greater": 2.92,
+          "child_pct": 97.09
+        },
+        "Lakshadweep": {
+          "age_0_5": 192,
+          "age_5_17": 10,
+          "age_18_greater": 1,
+          "total": 203,
+          "pct_age_0_5": 94.58,
+          "pct_age_5_17": 4.93,
+          "pct_age_18_greater": 0.49,
+          "child_pct": 99.50999999999999
+        },
+        "Madhya Pradesh": {
+          "age_0_5": 367990,
+          "age_5_17": 116381,
+          "age_18_greater": 9599,
+          "total": 493970,
+          "pct_age_0_5": 74.5,
+          "pct_age_5_17": 23.56,
+          "pct_age_18_greater": 1.94,
+          "child_pct": 98.06
+        },
+        "Maharashtra": {
+          "age_0_5": 278814,
+          "age_5_17": 82116,
+          "age_18_greater": 8209,
+          "total": 369139,
+          "pct_age_0_5": 75.53,
+          "pct_age_5_17": 22.25,
+          "pct_age_18_greater": 2.22,
+          "child_pct": 97.78
+        },
+        "Manipur": {
+          "age_0_5": 5140,
+          "age_5_17": 8053,
+          "age_18_greater": 263,
+          "total": 13456,
+          "pct_age_0_5": 38.2,
+          "pct_age_5_17": 59.85,
+          "pct_age_18_greater": 1.95,
+          "child_pct": 98.05000000000001
+        },
+        "Meghalaya": {
+          "age_0_5": 21179,
+          "age_5_17": 53305,
+          "age_18_greater": 35287,
+          "total": 109771,
+          "pct_age_0_5": 19.29,
+          "pct_age_5_17": 48.56,
+          "pct_age_18_greater": 32.15,
+          "child_pct": 67.85
+        },
+        "Mizoram": {
+          "age_0_5": 4136,
+          "age_5_17": 1295,
+          "age_18_greater": 495,
+          "total": 5926,
+          "pct_age_0_5": 69.79,
+          "pct_age_5_17": 21.85,
+          "pct_age_18_greater": 8.35,
+          "child_pct": 91.64000000000001
+        },
+        "Nagaland": {
+          "age_0_5": 4512,
+          "age_5_17": 9953,
+          "age_18_greater": 1122,
+          "total": 15587,
+          "pct_age_0_5": 28.95,
+          "pct_age_5_17": 63.85,
+          "pct_age_18_greater": 7.2,
+          "child_pct": 92.8
+        },
+        "ODISHA": {
+          "age_0_5": 1,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total": 1,
+          "pct_age_0_5": 100.0,
+          "pct_age_5_17": 0.0,
+          "pct_age_18_greater": 0.0,
+          "child_pct": 100.0
+        },
+        "Odisha": {
+          "age_0_5": 95882,
+          "age_5_17": 22216,
+          "age_18_greater": 739,
+          "total": 118837,
+          "pct_age_0_5": 80.68,
+          "pct_age_5_17": 18.69,
+          "pct_age_18_greater": 0.62,
+          "child_pct": 99.37
+        },
+        "Orissa": {
+          "age_0_5": 3548,
+          "age_5_17": 601,
+          "age_18_greater": 0,
+          "total": 4149,
+          "pct_age_0_5": 85.51,
+          "pct_age_5_17": 14.49,
+          "pct_age_18_greater": 0.0,
+          "child_pct": 100.0
+        },
+        "Pondicherry": {
+          "age_0_5": 1193,
+          "age_5_17": 79,
+          "age_18_greater": 0,
+          "total": 1272,
+          "pct_age_0_5": 93.79,
+          "pct_age_5_17": 6.21,
+          "pct_age_18_greater": 0.0,
+          "child_pct": 100.0
+        },
+        "Puducherry": {
+          "age_0_5": 1585,
+          "age_5_17": 116,
+          "age_18_greater": 44,
+          "total": 1745,
+          "pct_age_0_5": 90.83,
+          "pct_age_5_17": 6.65,
+          "pct_age_18_greater": 2.52,
+          "child_pct": 97.48
+        },
+        "Punjab": {
+          "age_0_5": 61224,
+          "age_5_17": 12350,
+          "age_18_greater": 3172,
+          "total": 76746,
+          "pct_age_0_5": 79.77,
+          "pct_age_5_17": 16.09,
+          "pct_age_18_greater": 4.13,
+          "child_pct": 95.86
+        },
+        "Rajasthan": {
+          "age_0_5": 229780,
+          "age_5_17": 113123,
+          "age_18_greater": 5555,
+          "total": 348458,
+          "pct_age_0_5": 65.94,
+          "pct_age_5_17": 32.46,
+          "pct_age_18_greater": 1.59,
+          "child_pct": 98.4
+        },
+        "Sikkim": {
+          "age_0_5": 1054,
+          "age_5_17": 1047,
+          "age_18_greater": 106,
+          "total": 2207,
+          "pct_age_0_5": 47.76,
+          "pct_age_5_17": 47.44,
+          "pct_age_18_greater": 4.8,
+          "child_pct": 95.19999999999999
+        },
+        "Tamil Nadu": {
+          "age_0_5": 182313,
+          "age_5_17": 37227,
+          "age_18_greater": 1249,
+          "total": 220789,
+          "pct_age_0_5": 82.57,
+          "pct_age_5_17": 16.86,
+          "pct_age_18_greater": 0.57,
+          "child_pct": 99.42999999999999
+        },
+        "Telangana": {
+          "age_0_5": 105918,
+          "age_5_17": 24505,
+          "age_18_greater": 1151,
+          "total": 131574,
+          "pct_age_0_5": 80.5,
+          "pct_age_5_17": 18.62,
+          "pct_age_18_greater": 0.87,
+          "child_pct": 99.12
+        },
+        "The Dadra And Nagar Haveli And Daman And Diu": {
+          "age_0_5": 548,
+          "age_5_17": 141,
+          "age_18_greater": 27,
+          "total": 716,
+          "pct_age_0_5": 76.54,
+          "pct_age_5_17": 19.69,
+          "pct_age_18_greater": 3.77,
+          "child_pct": 96.23
+        },
+        "Tripura": {
+          "age_0_5": 7376,
+          "age_5_17": 3654,
+          "age_18_greater": 255,
+          "total": 11285,
+          "pct_age_0_5": 65.36,
+          "pct_age_5_17": 32.38,
+          "pct_age_18_greater": 2.26,
+          "child_pct": 97.74000000000001
+        },
+        "Uttar Pradesh": {
+          "age_0_5": 521045,
+          "age_5_17": 479682,
+          "age_18_greater": 17902,
+          "total": 1018629,
+          "pct_age_0_5": 51.15,
+          "pct_age_5_17": 47.09,
+          "pct_age_18_greater": 1.76,
+          "child_pct": 98.24000000000001
+        },
+        "Uttarakhand": {
+          "age_0_5": 31880,
+          "age_5_17": 5479,
+          "age_18_greater": 339,
+          "total": 37698,
+          "pct_age_0_5": 84.57,
+          "pct_age_5_17": 14.53,
+          "pct_age_18_greater": 0.9,
+          "child_pct": 99.1
+        },
+        "WEST BENGAL": {
+          "age_0_5": 3,
+          "age_5_17": 1,
+          "age_18_greater": 0,
+          "total": 4,
+          "pct_age_0_5": 75.0,
+          "pct_age_5_17": 25.0,
+          "pct_age_18_greater": 0.0,
+          "child_pct": 100.0
+        },
+        "WESTBENGAL": {
+          "age_0_5": 1,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total": 1,
+          "pct_age_0_5": 100.0,
+          "pct_age_5_17": 0.0,
+          "pct_age_18_greater": 0.0,
+          "child_pct": 100.0
+        },
+        "West  Bengal": {
+          "age_0_5": 9,
+          "age_5_17": 6,
+          "age_18_greater": 0,
+          "total": 15,
+          "pct_age_0_5": 60.0,
+          "pct_age_5_17": 40.0,
+          "pct_age_18_greater": 0.0,
+          "child_pct": 100.0
+        },
+        "West Bangal": {
+          "age_0_5": 7,
+          "age_5_17": 3,
+          "age_18_greater": 0,
+          "total": 10,
+          "pct_age_0_5": 70.0,
+          "pct_age_5_17": 30.0,
+          "pct_age_18_greater": 0.0,
+          "child_pct": 100.0
+        },
+        "West Bengal": {
+          "age_0_5": 275391,
+          "age_5_17": 91396,
+          "age_18_greater": 8510,
+          "total": 375297,
+          "pct_age_0_5": 73.38,
+          "pct_age_5_17": 24.35,
+          "pct_age_18_greater": 2.27,
+          "child_pct": 97.72999999999999
+        },
+        "West bengal": {
+          "age_0_5": 6,
+          "age_5_17": 1,
+          "age_18_greater": 0,
+          "total": 7,
+          "pct_age_0_5": 85.71,
+          "pct_age_5_17": 14.29,
+          "pct_age_18_greater": 0.0,
+          "child_pct": 100.0
+        },
+        "Westbengal": {
+          "age_0_5": 3,
+          "age_5_17": 3,
+          "age_18_greater": 0,
+          "total": 6,
+          "pct_age_0_5": 50.0,
+          "pct_age_5_17": 50.0,
+          "pct_age_18_greater": 0.0,
+          "child_pct": 100.0
+        },
+        "andhra pradesh": {
+          "age_0_5": 5,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total": 5,
+          "pct_age_0_5": 100.0,
+          "pct_age_5_17": 0.0,
+          "pct_age_18_greater": 0.0,
+          "child_pct": 100.0
+        }
+      }
+    },
+    "inequities": {
+      "summary": {
+        "total_districts": 1070,
+        "median_enrollment": 2745,
+        "coefficient_of_variation": 1.281
+      },
+      "high_child_ratio_districts": [
+        {
+          "state": "Maharashtra",
+          "district": "Raigarh",
+          "age_0_5": 4414,
+          "age_5_17": 815,
+          "age_18_greater": 1,
+          "total_enrollment": 5230,
+          "children": 5229,
+          "child_adult_ratio": 5229.0
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Hyderabad",
+          "age_0_5": 3831,
+          "age_5_17": 1008,
+          "age_18_greater": 1,
+          "total_enrollment": 4840,
+          "children": 4839,
+          "child_adult_ratio": 4839.0
+        },
+        {
+          "state": "Tamil Nadu",
+          "district": "Tirunelveli",
+          "age_0_5": 8303,
+          "age_5_17": 1370,
+          "age_18_greater": 2,
+          "total_enrollment": 9675,
+          "children": 9673,
+          "child_adult_ratio": 4836.5
+        },
+        {
+          "state": "Chhattisgarh",
+          "district": "Janjgir-champa",
+          "age_0_5": 4066,
+          "age_5_17": 572,
+          "age_18_greater": 1,
+          "total_enrollment": 4639,
+          "children": 4638,
+          "child_adult_ratio": 4638.0
+        },
+        {
+          "state": "Karnataka",
+          "district": "Bellary",
+          "age_0_5": 3623,
+          "age_5_17": 596,
+          "age_18_greater": 1,
+          "total_enrollment": 4220,
+          "children": 4219,
+          "child_adult_ratio": 4219.0
+        },
+        {
+          "state": "Karnataka",
+          "district": "Belgaum",
+          "age_0_5": 5861,
+          "age_5_17": 880,
+          "age_18_greater": 2,
+          "total_enrollment": 6743,
+          "children": 6741,
+          "child_adult_ratio": 3370.5
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Cuddapah",
+          "age_0_5": 5519,
+          "age_5_17": 413,
+          "age_18_greater": 2,
+          "total_enrollment": 5934,
+          "children": 5932,
+          "child_adult_ratio": 2966.0
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Nellore",
+          "age_0_5": 4611,
+          "age_5_17": 754,
+          "age_18_greater": 2,
+          "total_enrollment": 5367,
+          "children": 5365,
+          "child_adult_ratio": 2682.5
+        },
+        {
+          "state": "Madhya Pradesh",
+          "district": "Dindori",
+          "age_0_5": 2409,
+          "age_5_17": 249,
+          "age_18_greater": 1,
+          "total_enrollment": 2659,
+          "children": 2658,
+          "child_adult_ratio": 2658.0
+        },
+        {
+          "state": "Odisha",
+          "district": "Sambalpur",
+          "age_0_5": 2234,
+          "age_5_17": 317,
+          "age_18_greater": 1,
+          "total_enrollment": 2552,
+          "children": 2551,
+          "child_adult_ratio": 2551.0
+        },
+        {
+          "state": "Uttar Pradesh",
+          "district": "Faizabad",
+          "age_0_5": 4052,
+          "age_5_17": 2871,
+          "age_18_greater": 3,
+          "total_enrollment": 6926,
+          "children": 6923,
+          "child_adult_ratio": 2307.6666666666665
+        },
+        {
+          "state": "Tamil Nadu",
+          "district": "Kanniyakumari",
+          "age_0_5": 2139,
+          "age_5_17": 135,
+          "age_18_greater": 1,
+          "total_enrollment": 2275,
+          "children": 2274,
+          "child_adult_ratio": 2274.0
+        },
+        {
+          "state": "Tamil Nadu",
+          "district": "Villupuram",
+          "age_0_5": 5854,
+          "age_5_17": 915,
+          "age_18_greater": 3,
+          "total_enrollment": 6772,
+          "children": 6769,
+          "child_adult_ratio": 2256.3333333333335
+        },
+        {
+          "state": "Chhattisgarh",
+          "district": "Kawardha",
+          "age_0_5": 1884,
+          "age_5_17": 257,
+          "age_18_greater": 1,
+          "total_enrollment": 2142,
+          "children": 2141,
+          "child_adult_ratio": 2141.0
+        },
+        {
+          "state": "Tamil Nadu",
+          "district": "Tiruchirappalli",
+          "age_0_5": 8396,
+          "age_5_17": 1531,
+          "age_18_greater": 5,
+          "total_enrollment": 9932,
+          "children": 9927,
+          "child_adult_ratio": 1985.4
+        },
+        {
+          "state": "Telangana",
+          "district": "Siddipet",
+          "age_0_5": 1701,
+          "age_5_17": 174,
+          "age_18_greater": 1,
+          "total_enrollment": 1876,
+          "children": 1875,
+          "child_adult_ratio": 1875.0
+        },
+        {
+          "state": "Jammu and Kashmir",
+          "district": "Badgam",
+          "age_0_5": 1674,
+          "age_5_17": 190,
+          "age_18_greater": 1,
+          "total_enrollment": 1865,
+          "children": 1864,
+          "child_adult_ratio": 1864.0
+        },
+        {
+          "state": "Tamil Nadu",
+          "district": "Thoothukkudi",
+          "age_0_5": 4439,
+          "age_5_17": 877,
+          "age_18_greater": 3,
+          "total_enrollment": 5319,
+          "children": 5316,
+          "child_adult_ratio": 1772.0
+        },
+        {
+          "state": "Chhattisgarh",
+          "district": "Koriya",
+          "age_0_5": 1258,
+          "age_5_17": 504,
+          "age_18_greater": 1,
+          "total_enrollment": 1763,
+          "children": 1762,
+          "child_adult_ratio": 1762.0
+        },
+        {
+          "state": "Karnataka",
+          "district": "Bangalore",
+          "age_0_5": 5776,
+          "age_5_17": 1236,
+          "age_18_greater": 4,
+          "total_enrollment": 7016,
+          "children": 7012,
+          "child_adult_ratio": 1753.0
+        }
+      ],
+      "underserved_districts": [
+        {
+          "state": "West Bengal",
+          "district": "East Midnapur",
+          "age_0_5": 1,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 1,
+          "children": 1,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "West Bengal",
+          "district": "Hooghiy",
+          "age_0_5": 1,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 1,
+          "children": 1,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "West Bengal",
+          "district": "KOLKATA",
+          "age_0_5": 0,
+          "age_5_17": 1,
+          "age_18_greater": 0,
+          "total_enrollment": 1,
+          "children": 1,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Rajasthan",
+          "district": "Beawar",
+          "age_0_5": 1,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 1,
+          "children": 1,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Tamil Nadu",
+          "district": "Namakkal   *",
+          "age_0_5": 0,
+          "age_5_17": 1,
+          "age_18_greater": 0,
+          "total_enrollment": 1,
+          "children": 1,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Rajasthan",
+          "district": "Balotra",
+          "age_0_5": 1,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 1,
+          "children": 1,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Rajasthan",
+          "district": "Salumbar",
+          "age_0_5": 1,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 1,
+          "children": 1,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Andaman & Nicobar Islands",
+          "district": "Nicobars",
+          "age_0_5": 1,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 1,
+          "children": 1,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Orissa",
+          "district": "Kendrapara *",
+          "age_0_5": 1,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 1,
+          "children": 1,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Orissa",
+          "district": "Sundergarh",
+          "age_0_5": 0,
+          "age_5_17": 1,
+          "age_18_greater": 0,
+          "total_enrollment": 1,
+          "children": 1,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Odisha",
+          "district": "ANGUL",
+          "age_0_5": 1,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 1,
+          "children": 1,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Uttar Pradesh",
+          "district": "Bagpat",
+          "age_0_5": 0,
+          "age_5_17": 1,
+          "age_18_greater": 0,
+          "total_enrollment": 1,
+          "children": 1,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "WESTBENGAL",
+          "district": "HOOGHLY",
+          "age_0_5": 1,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 1,
+          "children": 1,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "ODISHA",
+          "district": "NUAPADA",
+          "age_0_5": 1,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 1,
+          "children": 1,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Haryana",
+          "district": "Jhajjar *",
+          "age_0_5": 0,
+          "age_5_17": 1,
+          "age_18_greater": 0,
+          "total_enrollment": 1,
+          "children": 1,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Tamil Nadu",
+          "district": "Tiruvarur",
+          "age_0_5": 1,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 1,
+          "children": 1,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Jammu & Kashmir",
+          "district": "Punch",
+          "age_0_5": 1,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 1,
+          "children": 1,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Jammu and Kashmir",
+          "district": "punch",
+          "age_0_5": 1,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 1,
+          "children": 1,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Maharashtra",
+          "district": "Hingoli *",
+          "age_0_5": 1,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 1,
+          "children": 1,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "andhra pradesh",
+          "district": "rangareddi",
+          "age_0_5": 1,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 1,
+          "children": 1,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Jammu & Kashmir",
+          "district": "Badgam",
+          "age_0_5": 0,
+          "age_5_17": 2,
+          "age_18_greater": 0,
+          "total_enrollment": 2,
+          "children": 2,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Jammu & Kashmir",
+          "district": "Udhampur",
+          "age_0_5": 2,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 2,
+          "children": 2,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Jammu & Kashmir",
+          "district": "Bandipur",
+          "age_0_5": 2,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 2,
+          "children": 2,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Goa",
+          "district": "Bardez",
+          "age_0_5": 2,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 2,
+          "children": 2,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Tamil Nadu",
+          "district": "Tuticorin",
+          "age_0_5": 1,
+          "age_5_17": 1,
+          "age_18_greater": 0,
+          "total_enrollment": 2,
+          "children": 2,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Delhi",
+          "district": "North East   *",
+          "age_0_5": 2,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 2,
+          "children": 2,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Telangana",
+          "district": "Medchal?malkajgiri",
+          "age_0_5": 1,
+          "age_5_17": 1,
+          "age_18_greater": 0,
+          "total_enrollment": 2,
+          "children": 2,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "West Bengal",
+          "district": "HOOGHLY",
+          "age_0_5": 2,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 2,
+          "children": 2,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Orissa",
+          "district": "Khorda",
+          "age_0_5": 1,
+          "age_5_17": 1,
+          "age_18_greater": 0,
+          "total_enrollment": 2,
+          "children": 2,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Orissa",
+          "district": "Nuapada",
+          "age_0_5": 2,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 2,
+          "children": 2,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Rajasthan",
+          "district": "Didwana-Kuchaman",
+          "age_0_5": 2,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 2,
+          "children": 2,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Jammu & Kashmir",
+          "district": "Doda",
+          "age_0_5": 2,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 2,
+          "children": 2,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Jharkhand",
+          "district": "Bokaro *",
+          "age_0_5": 2,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 2,
+          "children": 2,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Mizoram",
+          "district": "Hnahthial",
+          "age_0_5": 2,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 2,
+          "children": 2,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Jammu & Kashmir",
+          "district": "Rajauri",
+          "age_0_5": 1,
+          "age_5_17": 1,
+          "age_18_greater": 0,
+          "total_enrollment": 2,
+          "children": 2,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Karnataka",
+          "district": "Udupi *",
+          "age_0_5": 2,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 2,
+          "children": 2,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "West Bengal",
+          "district": "West Medinipur",
+          "age_0_5": 1,
+          "age_5_17": 1,
+          "age_18_greater": 0,
+          "total_enrollment": 2,
+          "children": 2,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "West Bengal",
+          "district": "South 24 Pargana",
+          "age_0_5": 1,
+          "age_5_17": 1,
+          "age_18_greater": 0,
+          "total_enrollment": 2,
+          "children": 2,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "West Bengal",
+          "district": "South 24 parganas",
+          "age_0_5": 2,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 2,
+          "children": 2,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "West Bengal",
+          "district": "Burdwan",
+          "age_0_5": 2,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 2,
+          "children": 2,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Jammu & Kashmir",
+          "district": "Srinagar",
+          "age_0_5": 2,
+          "age_5_17": 1,
+          "age_18_greater": 0,
+          "total_enrollment": 3,
+          "children": 3,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Jammu & Kashmir",
+          "district": "Leh (ladakh)",
+          "age_0_5": 3,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 3,
+          "children": 3,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Karnataka",
+          "district": "Bijapur(KAR)",
+          "age_0_5": 3,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 3,
+          "children": 3,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Chandigarh",
+          "district": "Rupnagar",
+          "age_0_5": 3,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 3,
+          "children": 3,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Orissa",
+          "district": "Nabarangapur",
+          "age_0_5": 1,
+          "age_5_17": 2,
+          "age_18_greater": 0,
+          "total_enrollment": 3,
+          "children": 3,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "Leparada",
+          "age_0_5": 0,
+          "age_5_17": 2,
+          "age_18_greater": 1,
+          "total_enrollment": 3,
+          "children": 2,
+          "child_adult_ratio": 2.0
+        },
+        {
+          "state": "Orissa",
+          "district": "Baleswar",
+          "age_0_5": 2,
+          "age_5_17": 1,
+          "age_18_greater": 0,
+          "total_enrollment": 3,
+          "children": 3,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Uttar Pradesh",
+          "district": "Raebareli",
+          "age_0_5": 0,
+          "age_5_17": 3,
+          "age_18_greater": 0,
+          "total_enrollment": 3,
+          "children": 3,
+          "child_adult_ratio": null
+        },
+        {
+          "state": "Sikkim",
+          "district": "Mangan",
+          "age_0_5": 0,
+          "age_5_17": 2,
+          "age_18_greater": 1,
+          "total_enrollment": 3,
+          "children": 2,
+          "child_adult_ratio": 2.0
+        },
+        {
+          "state": "West Bengal",
+          "district": "NADIA",
+          "age_0_5": 3,
+          "age_5_17": 0,
+          "age_18_greater": 0,
+          "total_enrollment": 3,
+          "children": 3,
+          "child_adult_ratio": null
+        }
+      ],
+      "recommendations": [
+        "CRITICAL: 417 districts identified as underserved. Prioritize resource allocation and outreach programs.",
+        "High enrollment inequality detected (CV=1.28). Geographic disparities require policy intervention."
+      ]
+    },
+    "pin_clustering": {
+      "cluster_0": {
+        "size": 16724,
+        "total_pincodes": 16724,
+        "avg_enrollment": {
+          "age_0_5": 95,
+          "age_5_17": 31,
+          "age_18_greater": 2
+        },
+        "total_enrollment": {
+          "age_0_5": 1603137,
+          "age_5_17": 519124,
+          "age_18_greater": 36111
+        },
+        "characteristics": "Low-enrollment, 0-5-dominant"
+      },
+      "cluster_1": {
+        "size": 57,
+        "total_pincodes": 57,
+        "avg_enrollment": {
+          "age_0_5": 3966,
+          "age_5_17": 2719,
+          "age_18_greater": 178
+        },
+        "total_enrollment": {
+          "age_0_5": 226068,
+          "age_5_17": 155028,
+          "age_18_greater": 10172
+        },
+        "characteristics": "Medium-enrollment, 0-5-dominant"
+      },
+      "cluster_2": {
+        "size": 384,
+        "total_pincodes": 384,
+        "avg_enrollment": {
+          "age_0_5": 1361,
+          "age_5_17": 1023,
+          "age_18_greater": 108
+        },
+        "total_enrollment": {
+          "age_0_5": 522837,
+          "age_5_17": 393034,
+          "age_18_greater": 41840
+        },
+        "characteristics": "Medium-enrollment, 0-5-dominant"
+      },
+      "cluster_3": {
+        "size": 20,
+        "total_pincodes": 20,
+        "avg_enrollment": {
+          "age_0_5": 812,
+          "age_5_17": 1905,
+          "age_18_greater": 1339
+        },
+        "total_enrollment": {
+          "age_0_5": 16251,
+          "age_5_17": 38104,
+          "age_18_greater": 26781
+        },
+        "characteristics": "Medium-enrollment, 5-17-dominant"
+      },
+      "cluster_4": {
+        "size": 2278,
+        "total_pincodes": 2278,
+        "avg_enrollment": {
+          "age_0_5": 517,
+          "age_5_17": 270,
+          "age_18_greater": 23
+        },
+        "total_enrollment": {
+          "age_0_5": 1178672,
+          "age_5_17": 615094,
+          "age_18_greater": 53449
+        },
+        "characteristics": "Low-enrollment, 0-5-dominant"
+      }
+    },
+    "summary_statistics": {
+      "age_0_5": {
+        "count": 1006029,
+        "sum": 3546965,
+        "mean": 3.53,
+        "median": 2.0,
+        "std": 17.54,
+        "min": 0,
+        "max": 2688,
+        "percentiles": {
+          "25": 1.0,
+          "50": 2.0,
+          "75": 3.0,
+          "90": 7.0,
+          "95": 10.0,
+          "99": 23.0
+        }
+      },
+      "age_5_17": {
+        "count": 1006029,
+        "sum": 1720384,
+        "mean": 1.71,
+        "median": 0.0,
+        "std": 14.37,
+        "min": 0,
+        "max": 1812,
+        "percentiles": {
+          "25": 0.0,
+          "50": 0.0,
+          "75": 1.0,
+          "90": 3.0,
+          "95": 6.0,
+          "99": 14.0
+        }
+      },
+      "age_18_greater": {
+        "count": 1006029,
+        "sum": 168353,
+        "mean": 0.17,
+        "median": 0.0,
+        "std": 3.22,
+        "min": 0,
+        "max": 855,
+        "percentiles": {
+          "25": 0.0,
+          "50": 0.0,
+          "75": 0.0,
+          "90": 0.0,
+          "95": 0.0,
+          "99": 2.0
+        }
+      },
+      "total_enrollment": {
+        "count": 1006029,
+        "sum": 5435702,
+        "mean": 5.4,
+        "median": 2.0,
+        "std": 31.58,
+        "min": 1,
+        "max": 3965,
+        "percentiles": {
+          "25": 1.0,
+          "50": 2.0,
+          "75": 5.0,
+          "90": 10.0,
+          "95": 14.0,
+          "99": 33.0
+        }
+      }
+    }
+  },
+  "anomaly_detection": {
+    "summary": {
+      "total_records": 1006029,
+      "statistical_anomalies": 20475,
+      "temporal_anomalies": 88,
+      "geographic_anomalies": 975,
+      "ml_anomalies": 50276
+    },
+    "severity_distribution": {
+      "LOW": 1006029
+    },
+    "critical_anomalies": [],
+    "temporal_anomalies": [
+      {
+        "date": "2025-03-09 00:00:00",
+        "age_0_5": 1037,
+        "age_5_17": 1777,
+        "age_18_greater": 590,
+        "total_enrollment": 3404,
+        "age_0_5_pct_change": 9327.272727272726,
+        "age_0_5_sudden_change": true,
+        "age_0_5_ma_deviation": true,
+        "age_0_5_temporal_anomaly": true,
+        "age_5_17_pct_change": 2813.1147540983607,
+        "age_5_17_sudden_change": true,
+        "age_5_17_ma_deviation": true,
+        "age_5_17_temporal_anomaly": true,
+        "age_18_greater_pct_change": 1494.5945945945946,
+        "age_18_greater_sudden_change": true,
+        "age_18_greater_ma_deviation": true,
+        "age_18_greater_temporal_anomaly": true,
+        "total_enrollment_pct_change": 3022.935779816514,
+        "total_enrollment_sudden_change": true,
+        "total_enrollment_ma_deviation": true,
+        "total_enrollment_temporal_anomaly": true,
+        "has_temporal_anomaly": true
+      },
+      {
+        "date": "2025-03-15 00:00:00",
+        "age_0_5": 710,
+        "age_5_17": 1561,
+        "age_18_greater": 831,
+        "total_enrollment": 3102,
+        "age_0_5_pct_change": -31.533269045323042,
+        "age_0_5_sudden_change": false,
+        "age_0_5_ma_deviation": false,
+        "age_0_5_temporal_anomaly": false,
+        "age_5_17_pct_change": -12.155317951603827,
+        "age_5_17_sudden_change": false,
+        "age_5_17_ma_deviation": false,
+        "age_5_17_temporal_anomaly": false,
+        "age_18_greater_pct_change": 40.84745762711866,
+        "age_18_greater_sudden_change": false,
+        "age_18_greater_ma_deviation": true,
+        "age_18_greater_temporal_anomaly": true,
+        "total_enrollment_pct_change": -8.871915393654529,
+        "total_enrollment_sudden_change": false,
+        "total_enrollment_ma_deviation": false,
+        "total_enrollment_temporal_anomaly": false,
+        "has_temporal_anomaly": true
+      },
+      {
+        "date": "2025-03-20 00:00:00",
+        "age_0_5": 2291,
+        "age_5_17": 2533,
+        "age_18_greater": 1394,
+        "total_enrollment": 6218,
+        "age_0_5_pct_change": 222.67605633802816,
+        "age_0_5_sudden_change": true,
+        "age_0_5_ma_deviation": true,
+        "age_0_5_temporal_anomaly": true,
+        "age_5_17_pct_change": 62.267777065983346,
+        "age_5_17_sudden_change": true,
+        "age_5_17_ma_deviation": true,
+        "age_5_17_temporal_anomaly": true,
+        "age_18_greater_pct_change": 67.7496991576414,
+        "age_18_greater_sudden_change": true,
+        "age_18_greater_ma_deviation": true,
+        "age_18_greater_temporal_anomaly": true,
+        "total_enrollment_pct_change": 100.45132172791749,
+        "total_enrollment_sudden_change": true,
+        "total_enrollment_ma_deviation": true,
+        "total_enrollment_temporal_anomaly": true,
+        "has_temporal_anomaly": true
+      },
+      {
+        "date": "2025-03-23 00:00:00",
+        "age_0_5": 138,
+        "age_5_17": 259,
+        "age_18_greater": 179,
+        "total_enrollment": 576,
+        "age_0_5_pct_change": -93.9764295067656,
+        "age_0_5_sudden_change": true,
+        "age_0_5_ma_deviation": true,
+        "age_0_5_temporal_anomaly": true,
+        "age_5_17_pct_change": -89.7749703908409,
+        "age_5_17_sudden_change": true,
+        "age_5_17_ma_deviation": true,
+        "age_5_17_temporal_anomaly": true,
+        "age_18_greater_pct_change": -87.15925394548063,
+        "age_18_greater_sudden_change": true,
+        "age_18_greater_ma_deviation": true,
+        "age_18_greater_temporal_anomaly": true,
+        "total_enrollment_pct_change": -90.73657124477323,
+        "total_enrollment_sudden_change": true,
+        "total_enrollment_ma_deviation": true,
+        "total_enrollment_temporal_anomaly": true,
+        "has_temporal_anomaly": true
+      },
+      {
+        "date": "2025-03-26 00:00:00",
+        "age_0_5": 168,
+        "age_5_17": 26,
+        "age_18_greater": 17,
+        "total_enrollment": 211,
+        "age_0_5_pct_change": 21.739130434782616,
+        "age_0_5_sudden_change": false,
+        "age_0_5_ma_deviation": true,
+        "age_0_5_temporal_anomaly": true,
+        "age_5_17_pct_change": -89.96138996138995,
+        "age_5_17_sudden_change": true,
+        "age_5_17_ma_deviation": true,
+        "age_5_17_temporal_anomaly": true,
+        "age_18_greater_pct_change": -90.5027932960894,
+        "age_18_greater_sudden_change": true,
+        "age_18_greater_ma_deviation": true,
+        "age_18_greater_temporal_anomaly": true,
+        "total_enrollment_pct_change": -63.36805555555556,
+        "total_enrollment_sudden_change": true,
+        "total_enrollment_ma_deviation": true,
+        "total_enrollment_temporal_anomaly": true,
+        "has_temporal_anomaly": true
+      },
+      {
+        "date": "2025-03-27 00:00:00",
+        "age_0_5": 939,
+        "age_5_17": 1121,
+        "age_18_greater": 644,
+        "total_enrollment": 2704,
+        "age_0_5_pct_change": 458.92857142857144,
+        "age_0_5_sudden_change": true,
+        "age_0_5_ma_deviation": false,
+        "age_0_5_temporal_anomaly": true,
+        "age_5_17_pct_change": 4211.538461538461,
+        "age_5_17_sudden_change": true,
+        "age_5_17_ma_deviation": false,
+        "age_5_17_temporal_anomaly": true,
+        "age_18_greater_pct_change": 3688.2352941176473,
+        "age_18_greater_sudden_change": true,
+        "age_18_greater_ma_deviation": false,
+        "age_18_greater_temporal_anomaly": true,
+        "total_enrollment_pct_change": 1181.5165876777253,
+        "total_enrollment_sudden_change": true,
+        "total_enrollment_ma_deviation": false,
+        "total_enrollment_temporal_anomaly": true,
+        "has_temporal_anomaly": true
+      },
+      {
+        "date": "2025-03-28 00:00:00",
+        "age_0_5": 43,
+        "age_5_17": 58,
+        "age_18_greater": 90,
+        "total_enrollment": 191,
+        "age_0_5_pct_change": -95.42066027689032,
+        "age_0_5_sudden_change": true,
+        "age_0_5_ma_deviation": true,
+        "age_0_5_temporal_anomaly": true,
+        "age_5_17_pct_change": -94.82604817127564,
+        "age_5_17_sudden_change": true,
+        "age_5_17_ma_deviation": true,
+        "age_5_17_temporal_anomaly": true,
+        "age_18_greater_pct_change": -86.0248447204969,
+        "age_18_greater_sudden_change": true,
+        "age_18_greater_ma_deviation": true,
+        "age_18_greater_temporal_anomaly": true,
+        "total_enrollment_pct_change": -92.93639053254438,
+        "total_enrollment_sudden_change": true,
+        "total_enrollment_ma_deviation": true,
+        "total_enrollment_temporal_anomaly": true,
+        "has_temporal_anomaly": true
+      },
+      {
+        "date": "2025-03-29 00:00:00",
+        "age_0_5": 30,
+        "age_5_17": 11,
+        "age_18_greater": 26,
+        "total_enrollment": 67,
+        "age_0_5_pct_change": -30.23255813953488,
+        "age_0_5_sudden_change": false,
+        "age_0_5_ma_deviation": true,
+        "age_0_5_temporal_anomaly": true,
+        "age_5_17_pct_change": -81.03448275862068,
+        "age_5_17_sudden_change": true,
+        "age_5_17_ma_deviation": true,
+        "age_5_17_temporal_anomaly": true,
+        "age_18_greater_pct_change": -71.11111111111111,
+        "age_18_greater_sudden_change": true,
+        "age_18_greater_ma_deviation": true,
+        "age_18_greater_temporal_anomaly": true,
+        "total_enrollment_pct_change": -64.92146596858639,
+        "total_enrollment_sudden_change": true,
+        "total_enrollment_ma_deviation": true,
+        "total_enrollment_temporal_anomaly": true,
+        "has_temporal_anomaly": true
+      },
+      {
+        "date": "2025-04-01 00:00:00",
+        "age_0_5": 141154,
+        "age_5_17": 91371,
+        "age_18_greater": 24913,
+        "total_enrollment": 257438,
+        "age_0_5_pct_change": 470413.3333333333,
+        "age_0_5_sudden_change": true,
+        "age_0_5_ma_deviation": true,
+        "age_0_5_temporal_anomaly": true,
+        "age_5_17_pct_change": 830545.4545454546,
+        "age_5_17_sudden_change": true,
+        "age_5_17_ma_deviation": true,
+        "age_5_17_temporal_anomaly": true,
+        "age_18_greater_pct_change": 95719.23076923078,
+        "age_18_greater_sudden_change": true,
+        "age_18_greater_ma_deviation": true,
+        "age_18_greater_temporal_anomaly": true,
+        "total_enrollment_pct_change": 384135.82089552237,
+        "total_enrollment_sudden_change": true,
+        "total_enrollment_ma_deviation": true,
+        "total_enrollment_temporal_anomaly": true,
+        "has_temporal_anomaly": true
+      },
+      {
+        "date": "2025-05-01 00:00:00",
+        "age_0_5": 95342,
+        "age_5_17": 71690,
+        "age_18_greater": 16584,
+        "total_enrollment": 183616,
+        "age_0_5_pct_change": -32.45533247375207,
+        "age_0_5_sudden_change": false,
+        "age_0_5_ma_deviation": true,
+        "age_0_5_temporal_anomaly": true,
+        "age_5_17_pct_change": -21.53965700276893,
+        "age_5_17_sudden_change": false,
+        "age_5_17_ma_deviation": true,
+        "age_5_17_temporal_anomaly": true,
+        "age_18_greater_pct_change": -33.432344559065555,
+        "age_18_greater_sudden_change": false,
+        "age_18_greater_ma_deviation": true,
+        "age_18_greater_temporal_anomaly": true,
+        "total_enrollment_pct_change": -28.675642290570934,
+        "total_enrollment_sudden_change": false,
+        "total_enrollment_ma_deviation": true,
+        "total_enrollment_temporal_anomaly": true,
+        "has_temporal_anomaly": true
+      },
+      {
+        "date": "2025-06-01 00:00:00",
+        "age_0_5": 98943,
+        "age_5_17": 99911,
+        "age_18_greater": 16880,
+        "total_enrollment": 215734,
+        "age_0_5_pct_change": 3.7769293700572693,
+        "age_0_5_sudden_change": false,
+        "age_0_5_ma_deviation": true,
+        "age_0_5_temporal_anomaly": true,
+        "age_5_17_pct_change": 39.36532291811967,
+        "age_5_17_sudden_change": false,
+        "age_5_17_ma_deviation": true,
+        "age_5_17_temporal_anomaly": true,
+        "age_18_greater_pct_change": 1.7848528702363753,
+        "age_18_greater_sudden_change": false,
+        "age_18_greater_ma_deviation": true,
+        "age_18_greater_temporal_anomaly": true,
+        "total_enrollment_pct_change": 17.491939700243986,
+        "total_enrollment_sudden_change": false,
+        "total_enrollment_ma_deviation": true,
+        "total_enrollment_temporal_anomaly": true,
+        "has_temporal_anomaly": true
+      },
+      {
+        "date": "2025-07-01 00:00:00",
+        "age_0_5": 318352,
+        "age_5_17": 263333,
+        "age_18_greater": 35183,
+        "total_enrollment": 616868,
+        "age_0_5_pct_change": 221.75292845375617,
+        "age_0_5_sudden_change": true,
+        "age_0_5_ma_deviation": true,
+        "age_0_5_temporal_anomaly": true,
+        "age_5_17_pct_change": 163.56757514187626,
+        "age_5_17_sudden_change": true,
+        "age_5_17_ma_deviation": true,
+        "age_5_17_temporal_anomaly": true,
+        "age_18_greater_pct_change": 108.43009478672987,
+        "age_18_greater_sudden_change": true,
+        "age_18_greater_ma_deviation": true,
+        "age_18_greater_temporal_anomaly": true,
+        "total_enrollment_pct_change": 185.93916582458027,
+        "total_enrollment_sudden_change": true,
+        "total_enrollment_ma_deviation": true,
+        "total_enrollment_temporal_anomaly": true,
+        "has_temporal_anomaly": true
+      },
+      {
+        "date": "2025-09-01 00:00:00",
+        "age_0_5": 48755,
+        "age_5_17": 25157,
+        "age_18_greater": 1077,
+        "total_enrollment": 74989,
+        "age_0_5_pct_change": -84.68519123485953,
+        "age_0_5_sudden_change": true,
+        "age_0_5_ma_deviation": false,
+        "age_0_5_temporal_anomaly": true,
+        "age_5_17_pct_change": -90.4466967679706,
+        "age_5_17_sudden_change": true,
+        "age_5_17_ma_deviation": false,
+        "age_5_17_temporal_anomaly": true,
+        "age_18_greater_pct_change": -96.93886251883012,
+        "age_18_greater_sudden_change": true,
+        "age_18_greater_ma_deviation": true,
+        "age_18_greater_temporal_anomaly": true,
+        "total_enrollment_pct_change": -87.84359052503939,
+        "total_enrollment_sudden_change": true,
+        "total_enrollment_ma_deviation": false,
+        "total_enrollment_temporal_anomaly": true,
+        "has_temporal_anomaly": true
+      },
+      {
+        "date": "2025-09-02 00:00:00",
+        "age_0_5": 50550,
+        "age_5_17": 24998,
+        "age_18_greater": 948,
+        "total_enrollment": 76496,
+        "age_0_5_pct_change": 3.681673674494923,
+        "age_0_5_sudden_change": false,
+        "age_0_5_ma_deviation": false,
+        "age_0_5_temporal_anomaly": false,
+        "age_5_17_pct_change": -0.6320308462853252,
+        "age_5_17_sudden_change": false,
+        "age_5_17_ma_deviation": false,
+        "age_5_17_temporal_anomaly": false,
+        "age_18_greater_pct_change": -11.977715877437323,
+        "age_18_greater_sudden_change": false,
+        "age_18_greater_ma_deviation": true,
+        "age_18_greater_temporal_anomaly": true,
+        "total_enrollment_pct_change": 2.0096280787848864,
+        "total_enrollment_sudden_change": false,
+        "total_enrollment_ma_deviation": false,
+        "total_enrollment_temporal_anomaly": false,
+        "has_temporal_anomaly": true
+      },
+      {
+        "date": "2025-09-03 00:00:00",
+        "age_0_5": 47843,
+        "age_5_17": 23301,
+        "age_18_greater": 844,
+        "total_enrollment": 71988,
+        "age_0_5_pct_change": -5.355093966369928,
+        "age_0_5_sudden_change": false,
+        "age_0_5_ma_deviation": false,
+        "age_0_5_temporal_anomaly": false,
+        "age_5_17_pct_change": -6.788543083446674,
+        "age_5_17_sudden_change": false,
+        "age_5_17_ma_deviation": false,
+        "age_5_17_temporal_anomaly": false,
+        "age_18_greater_pct_change": -10.970464135021096,
+        "age_18_greater_sudden_change": false,
+        "age_18_greater_ma_deviation": true,
+        "age_18_greater_temporal_anomaly": true,
+        "total_enrollment_pct_change": -5.8931185944363085,
+        "total_enrollment_sudden_change": false,
+        "total_enrollment_ma_deviation": false,
+        "total_enrollment_temporal_anomaly": false,
+        "has_temporal_anomaly": true
+      },
+      {
+        "date": "2025-09-04 00:00:00",
+        "age_0_5": 43057,
+        "age_5_17": 21463,
+        "age_18_greater": 829,
+        "total_enrollment": 65349,
+        "age_0_5_pct_change": -10.003553288882383,
+        "age_0_5_sudden_change": false,
+        "age_0_5_ma_deviation": false,
+        "age_0_5_temporal_anomaly": false,
+        "age_5_17_pct_change": -7.888073473241497,
+        "age_5_17_sudden_change": false,
+        "age_5_17_ma_deviation": false,
+        "age_5_17_temporal_anomaly": false,
+        "age_18_greater_pct_change": -1.7772511848341277,
+        "age_18_greater_sudden_change": false,
+        "age_18_greater_ma_deviation": true,
+        "age_18_greater_temporal_anomaly": true,
+        "total_enrollment_pct_change": -9.222370395065848,
+        "total_enrollment_sudden_change": false,
+        "total_enrollment_ma_deviation": false,
+        "total_enrollment_temporal_anomaly": false,
+        "has_temporal_anomaly": true
+      },
+      {
+        "date": "2025-09-05 00:00:00",
+        "age_0_5": 18400,
+        "age_5_17": 7238,
+        "age_18_greater": 431,
+        "total_enrollment": 26069,
+        "age_0_5_pct_change": -57.265949787490996,
+        "age_0_5_sudden_change": true,
+        "age_0_5_ma_deviation": true,
+        "age_0_5_temporal_anomaly": true,
+        "age_5_17_pct_change": -66.27684853002842,
+        "age_5_17_sudden_change": true,
+        "age_5_17_ma_deviation": true,
+        "age_5_17_temporal_anomaly": true,
+        "age_18_greater_pct_change": -48.00965018094089,
+        "age_18_greater_sudden_change": false,
+        "age_18_greater_ma_deviation": true,
+        "age_18_greater_temporal_anomaly": true,
+        "total_enrollment_pct_change": -60.10803531806148,
+        "total_enrollment_sudden_change": true,
+        "total_enrollment_ma_deviation": true,
+        "total_enrollment_temporal_anomaly": true,
+        "has_temporal_anomaly": true
+      },
+      {
+        "date": "2025-09-06 00:00:00",
+        "age_0_5": 40158,
+        "age_5_17": 18244,
+        "age_18_greater": 555,
+        "total_enrollment": 58957,
+        "age_0_5_pct_change": 118.25000000000001,
+        "age_0_5_sudden_change": true,
+        "age_0_5_ma_deviation": false,
+        "age_0_5_temporal_anomaly": true,
+        "age_5_17_pct_change": 152.05857971815416,
+        "age_5_17_sudden_change": true,
+        "age_5_17_ma_deviation": false,
+        "age_5_17_temporal_anomaly": true,
+        "age_18_greater_pct_change": 28.770301624129925,
+        "age_18_greater_sudden_change": false,
+        "age_18_greater_ma_deviation": true,
+        "age_18_greater_temporal_anomaly": true,
+        "total_enrollment_pct_change": 126.15750508266524,
+        "total_enrollment_sudden_change": true,
+        "total_enrollment_ma_deviation": false,
+        "total_enrollment_temporal_anomaly": true,
+        "has_temporal_anomaly": true
+      },
+      {
+        "date": "2025-09-07 00:00:00",
+        "age_0_5": 10305,
+        "age_5_17": 4197,
+        "age_18_greater": 156,
+        "total_enrollment": 14658,
+        "age_0_5_pct_change": -74.33886149708651,
+        "age_0_5_sudden_change": true,
+        "age_0_5_ma_deviation": true,
+        "age_0_5_temporal_anomaly": true,
+        "age_5_17_pct_change": -76.99517649638237,
+        "age_5_17_sudden_change": true,
+        "age_5_17_ma_deviation": true,
+        "age_5_17_temporal_anomaly": true,
+        "age_18_greater_pct_change": -71.89189189189189,
+        "age_18_greater_sudden_change": true,
+        "age_18_greater_ma_deviation": true,
+        "age_18_greater_temporal_anomaly": true,
+        "total_enrollment_pct_change": -75.13781230388248,
+        "total_enrollment_sudden_change": true,
+        "total_enrollment_ma_deviation": true,
+        "total_enrollment_temporal_anomaly": true,
+        "has_temporal_anomaly": true
+      },
+      {
+        "date": "2025-09-08 00:00:00",
+        "age_0_5": 57659,
+        "age_5_17": 24816,
+        "age_18_greater": 878,
+        "total_enrollment": 83353,
+        "age_0_5_pct_change": 459.5245026686075,
+        "age_0_5_sudden_change": true,
+        "age_0_5_ma_deviation": false,
+        "age_0_5_temporal_anomaly": true,
+        "age_5_17_pct_change": 491.2794853466762,
+        "age_5_17_sudden_change": true,
+        "age_5_17_ma_deviation": false,
+        "age_5_17_temporal_anomaly": true,
+        "age_18_greater_pct_change": 462.8205128205129,
+        "age_18_greater_sudden_change": true,
+        "age_18_greater_ma_deviation": true,
+        "age_18_greater_temporal_anomaly": true,
+        "total_enrollment_pct_change": 468.6519306863146,
+        "total_enrollment_sudden_change": true,
+        "total_enrollment_ma_deviation": false,
+        "total_enrollment_temporal_anomaly": true,
+        "has_temporal_anomaly": true
+      }
+    ],
+    "geographic_anomalies": [
+      {
+        "state": "100000",
+        "district": "100000",
+        "total_enrollment": 218
+      },
+      {
+        "state": "Andaman & Nicobar Islands",
+        "district": "Andamans",
+        "total_enrollment": 75
+      },
+      {
+        "state": "Andaman & Nicobar Islands",
+        "district": "South Andaman",
+        "total_enrollment": 38
+      },
+      {
+        "state": "Andaman and Nicobar Islands",
+        "district": "Nicobar",
+        "total_enrollment": 75
+      },
+      {
+        "state": "Andaman and Nicobar Islands",
+        "district": "North And Middle Andaman",
+        "total_enrollment": 132
+      },
+      {
+        "state": "Andaman and Nicobar Islands",
+        "district": "South Andaman",
+        "total_enrollment": 190
+      },
+      {
+        "state": "Andhra Pradesh",
+        "district": "Adilabad",
+        "total_enrollment": 1419
+      },
+      {
+        "state": "Andhra Pradesh",
+        "district": "Alluri Sitharama Raju",
+        "total_enrollment": 1255
+      },
+      {
+        "state": "Andhra Pradesh",
+        "district": "Anakapalli",
+        "total_enrollment": 543
+      },
+      {
+        "state": "Andhra Pradesh",
+        "district": "Anantapur",
+        "total_enrollment": 4415
+      },
+      {
+        "state": "Andhra Pradesh",
+        "district": "Ananthapur",
+        "total_enrollment": 1994
+      },
+      {
+        "state": "Andhra Pradesh",
+        "district": "Ananthapuramu",
+        "total_enrollment": 3187
+      },
+      {
+        "state": "Andhra Pradesh",
+        "district": "Annamayya",
+        "total_enrollment": 1021
+      },
+      {
+        "state": "Andhra Pradesh",
+        "district": "Bapatla",
+        "total_enrollment": 492
+      },
+      {
+        "state": "Andhra Pradesh",
+        "district": "Chittoor",
+        "total_enrollment": 8195
+      },
+      {
+        "state": "Andhra Pradesh",
+        "district": "Cuddapah",
+        "total_enrollment": 5934
+      },
+      {
+        "state": "Andhra Pradesh",
+        "district": "Dr. B. R. Ambedkar Konaseema",
+        "total_enrollment": 665
+      },
+      {
+        "state": "Andhra Pradesh",
+        "district": "East Godavari",
+        "total_enrollment": 7678
+      },
+      {
+        "state": "Andhra Pradesh",
+        "district": "Eluru",
+        "total_enrollment": 629
+      },
+      {
+        "state": "Andhra Pradesh",
+        "district": "Guntur",
+        "total_enrollment": 9729
+      }
+    ],
+    "recommendations": [
+      "Frequent temporal anomalies detected (88 days). Investigate enrollment system stability.",
+      "Widespread geographic anomalies (975 districts). Review regional data collection processes."
+    ]
+  },
+  "forecasting": {
+    "forecast_horizon": 6,
+    "historical_summary": {
+      "mean": 648207.55,
+      "median": 688263.0,
+      "std": 475776.58,
+      "min": 16582.0,
+      "max": 1475879.0,
+      "trend": "increasing"
+    },
+    "individual_forecasts": [
+      {
+        "model": "SARIMA",
+        "forecast": [
+          759658.0,
+          759658.0,
+          770712.6666666666,
+          1011568.6666666667,
+          937746.6666666667,
+          969864.6666666667
+        ],
+        "forecast_index": [
+          "2026-01-01 00:00:00",
+          "2026-02-01 00:00:00",
+          "2026-03-01 00:00:00",
+          "2026-04-01 00:00:00",
+          "2026-05-01 00:00:00",
+          "2026-06-01 00:00:00"
+        ],
+        "confidence_intervals": {
+          "0.8": {
+            "lower": [
+              757845.6119420296,
+              757094.8962281351,
+              767661.9629315198,
+              1008259.7137602078,
+              934437.7135120365,
+              966555.7132638652
+            ],
+            "upper": [
+              761470.3880579704,
+              762221.1037718649,
+              773763.3704018134,
+              1014877.6195731257,
+              941055.619821297,
+              973173.6200694683
+            ]
+          },
+          "0.95": {
+            "lower": [
+              756886.1916583488,
+              755738.071050938,
+              766047.0179256042,
+              1006508.0599009588,
+              932686.0595214135,
+              964804.0591418683
+            ],
+            "upper": [
+              762429.8083416512,
+              763577.928949062,
+              775378.315407729,
+              1016629.2734323747,
+              942807.27381192,
+              974925.2741914652
+            ]
+          }
+        },
+        "metrics": {
+          "MAE": 319037.33,
+          "RMSE": 367096.85,
+          "MAPE": 48.12
+        },
+        "aic": 10.0,
+        "bic": NaN
+      },
+      {
+        "model": "ExponentialSmoothing",
+        "error": "Cannot compute initial seasonals using heuristic method with less than two full seasonal cycles in the data."
+      },
+      {
+        "model": "XGBoost",
+        "error": "Insufficient data for ML forecasting"
+      }
+    ],
+    "ensemble_forecast": {
+      "model": "Ensemble",
+      "forecast": [
+        759658.0,
+        759658.0,
+        770712.6666666666,
+        1011568.6666666667,
+        937746.6666666667,
+        969864.6666666667
+      ],
+      "metrics": {
+        "MAE": 319037.33,
+        "RMSE": 367096.85,
+        "MAPE": 48.12
+      },
+      "component_models": [
+        "SARIMA"
+      ]
+    },
+    "surge_detection": {
+      "surge_detected": false,
+      "num_surge_periods": 0,
+      "surge_periods": [],
+      "surge_threshold": 1303136.6
+    },
+    "recommendations": [
+      "Forecast accuracy moderate (MAPE=48.12%). Consider improving data quality and feature engineering.",
+      "Enrollment shows increasing trend. Plan for sustained capacity expansion."
+    ]
+  },
+  "policy_impact": {
+    "priority_districts": [
+      {
+        "state": "Andaman & Nicobar Islands",
+        "district": "Nicobars",
+        "age_0_5": 1,
+        "age_5_17": 0,
+        "age_18_greater": 0,
+        "total_enrollment": 1,
+        "enrollment_score": 0.9999771104193371,
+        "inequity_score": 0,
+        "forecast_score": 0,
+        "dri_priority_score": 0,
+        "priority_score": 100.0,
+        "priority_tier": "Critical",
+        "required_centers": 1,
+        "required_staff": 1
+      },
+      {
+        "state": "Arunachal Pradesh",
+        "district": "Leparada",
+        "age_0_5": 0,
+        "age_5_17": 2,
+        "age_18_greater": 1,
+        "total_enrollment": 3,
+        "enrollment_score": 0.9999313312580114,
+        "inequity_score": 0,
+        "forecast_score": 0,
+        "dri_priority_score": 0,
+        "priority_score": 100.0,
+        "priority_tier": "Critical",
+        "required_centers": 1,
+        "required_staff": 1
+      },
+      {
+        "state": "Chandigarh",
+        "district": "Rupnagar",
+        "age_0_5": 3,
+        "age_5_17": 0,
+        "age_18_greater": 0,
+        "total_enrollment": 3,
+        "enrollment_score": 0.9999313312580114,
+        "inequity_score": 0,
+        "forecast_score": 0,
+        "dri_priority_score": 0,
+        "priority_score": 100.0,
+        "priority_tier": "Critical",
+        "required_centers": 1,
+        "required_staff": 1
+      },
+      {
+        "state": "Delhi",
+        "district": "North East   *",
+        "age_0_5": 2,
+        "age_5_17": 0,
+        "age_18_greater": 0,
+        "total_enrollment": 2,
+        "enrollment_score": 0.9999542208386742,
+        "inequity_score": 0,
+        "forecast_score": 0,
+        "dri_priority_score": 0,
+        "priority_score": 100.0,
+        "priority_tier": "Critical",
+        "required_centers": 1,
+        "required_staff": 1
+      },
+      {
+        "state": "Goa",
+        "district": "Bardez",
+        "age_0_5": 2,
+        "age_5_17": 0,
+        "age_18_greater": 0,
+        "total_enrollment": 2,
+        "enrollment_score": 0.9999542208386742,
+        "inequity_score": 0,
+        "forecast_score": 0,
+        "dri_priority_score": 0,
+        "priority_score": 100.0,
+        "priority_tier": "Critical",
+        "required_centers": 1,
+        "required_staff": 1
+      },
+      {
+        "state": "Haryana",
+        "district": "Jhajjar *",
+        "age_0_5": 0,
+        "age_5_17": 1,
+        "age_18_greater": 0,
+        "total_enrollment": 1,
+        "enrollment_score": 0.9999771104193371,
+        "inequity_score": 0,
+        "forecast_score": 0,
+        "dri_priority_score": 0,
+        "priority_score": 100.0,
+        "priority_tier": "Critical",
+        "required_centers": 1,
+        "required_staff": 1
+      },
+      {
+        "state": "Himachal Pradesh",
+        "district": "Lahaul and Spiti",
+        "age_0_5": 3,
+        "age_5_17": 0,
+        "age_18_greater": 0,
+        "total_enrollment": 3,
+        "enrollment_score": 0.9999313312580114,
+        "inequity_score": 0,
+        "forecast_score": 0,
+        "dri_priority_score": 0,
+        "priority_score": 100.0,
+        "priority_tier": "Critical",
+        "required_centers": 1,
+        "required_staff": 1
+      },
+      {
+        "state": "Jammu & Kashmir",
+        "district": "Badgam",
+        "age_0_5": 0,
+        "age_5_17": 2,
+        "age_18_greater": 0,
+        "total_enrollment": 2,
+        "enrollment_score": 0.9999542208386742,
+        "inequity_score": 0,
+        "forecast_score": 0,
+        "dri_priority_score": 0,
+        "priority_score": 100.0,
+        "priority_tier": "Critical",
+        "required_centers": 1,
+        "required_staff": 1
+      },
+      {
+        "state": "Jammu & Kashmir",
+        "district": "Bandipur",
+        "age_0_5": 2,
+        "age_5_17": 0,
+        "age_18_greater": 0,
+        "total_enrollment": 2,
+        "enrollment_score": 0.9999542208386742,
+        "inequity_score": 0,
+        "forecast_score": 0,
+        "dri_priority_score": 0,
+        "priority_score": 100.0,
+        "priority_tier": "Critical",
+        "required_centers": 1,
+        "required_staff": 1
+      },
+      {
+        "state": "Jammu & Kashmir",
+        "district": "Doda",
+        "age_0_5": 2,
+        "age_5_17": 0,
+        "age_18_greater": 0,
+        "total_enrollment": 2,
+        "enrollment_score": 0.9999542208386742,
+        "inequity_score": 0,
+        "forecast_score": 0,
+        "dri_priority_score": 0,
+        "priority_score": 100.0,
+        "priority_tier": "Critical",
+        "required_centers": 1,
+        "required_staff": 1
+      },
+      {
+        "state": "Jammu & Kashmir",
+        "district": "Leh (ladakh)",
+        "age_0_5": 3,
+        "age_5_17": 0,
+        "age_18_greater": 0,
+        "total_enrollment": 3,
+        "enrollment_score": 0.9999313312580114,
+        "inequity_score": 0,
+        "forecast_score": 0,
+        "dri_priority_score": 0,
+        "priority_score": 100.0,
+        "priority_tier": "Critical",
+        "required_centers": 1,
+        "required_staff": 1
+      },
+      {
+        "state": "Jammu & Kashmir",
+        "district": "Punch",
+        "age_0_5": 1,
+        "age_5_17": 0,
+        "age_18_greater": 0,
+        "total_enrollment": 1,
+        "enrollment_score": 0.9999771104193371,
+        "inequity_score": 0,
+        "forecast_score": 0,
+        "dri_priority_score": 0,
+        "priority_score": 100.0,
+        "priority_tier": "Critical",
+        "required_centers": 1,
+        "required_staff": 1
+      },
+      {
+        "state": "Jammu & Kashmir",
+        "district": "Rajauri",
+        "age_0_5": 1,
+        "age_5_17": 1,
+        "age_18_greater": 0,
+        "total_enrollment": 2,
+        "enrollment_score": 0.9999542208386742,
+        "inequity_score": 0,
+        "forecast_score": 0,
+        "dri_priority_score": 0,
+        "priority_score": 100.0,
+        "priority_tier": "Critical",
+        "required_centers": 1,
+        "required_staff": 1
+      },
+      {
+        "state": "Jammu & Kashmir",
+        "district": "Srinagar",
+        "age_0_5": 2,
+        "age_5_17": 1,
+        "age_18_greater": 0,
+        "total_enrollment": 3,
+        "enrollment_score": 0.9999313312580114,
+        "inequity_score": 0,
+        "forecast_score": 0,
+        "dri_priority_score": 0,
+        "priority_score": 100.0,
+        "priority_tier": "Critical",
+        "required_centers": 1,
+        "required_staff": 1
+      },
+      {
+        "state": "Jammu & Kashmir",
+        "district": "Udhampur",
+        "age_0_5": 2,
+        "age_5_17": 0,
+        "age_18_greater": 0,
+        "total_enrollment": 2,
+        "enrollment_score": 0.9999542208386742,
+        "inequity_score": 0,
+        "forecast_score": 0,
+        "dri_priority_score": 0,
+        "priority_score": 100.0,
+        "priority_tier": "Critical",
+        "required_centers": 1,
+        "required_staff": 1
+      },
+      {
+        "state": "Jammu and Kashmir",
+        "district": "punch",
+        "age_0_5": 1,
+        "age_5_17": 0,
+        "age_18_greater": 0,
+        "total_enrollment": 1,
+        "enrollment_score": 0.9999771104193371,
+        "inequity_score": 0,
+        "forecast_score": 0,
+        "dri_priority_score": 0,
+        "priority_score": 100.0,
+        "priority_tier": "Critical",
+        "required_centers": 1,
+        "required_staff": 1
+      },
+      {
+        "state": "Jharkhand",
+        "district": "Bokaro *",
+        "age_0_5": 2,
+        "age_5_17": 0,
+        "age_18_greater": 0,
+        "total_enrollment": 2,
+        "enrollment_score": 0.9999542208386742,
+        "inequity_score": 0,
+        "forecast_score": 0,
+        "dri_priority_score": 0,
+        "priority_score": 100.0,
+        "priority_tier": "Critical",
+        "required_centers": 1,
+        "required_staff": 1
+      },
+      {
+        "state": "Karnataka",
+        "district": "Bijapur(KAR)",
+        "age_0_5": 3,
+        "age_5_17": 0,
+        "age_18_greater": 0,
+        "total_enrollment": 3,
+        "enrollment_score": 0.9999313312580114,
+        "inequity_score": 0,
+        "forecast_score": 0,
+        "dri_priority_score": 0,
+        "priority_score": 100.0,
+        "priority_tier": "Critical",
+        "required_centers": 1,
+        "required_staff": 1
+      },
+      {
+        "state": "Karnataka",
+        "district": "Udupi *",
+        "age_0_5": 2,
+        "age_5_17": 0,
+        "age_18_greater": 0,
+        "total_enrollment": 2,
+        "enrollment_score": 0.9999542208386742,
+        "inequity_score": 0,
+        "forecast_score": 0,
+        "dri_priority_score": 0,
+        "priority_score": 100.0,
+        "priority_tier": "Critical",
+        "required_centers": 1,
+        "required_staff": 1
+      },
+      {
+        "state": "Maharashtra",
+        "district": "Hingoli *",
+        "age_0_5": 1,
+        "age_5_17": 0,
+        "age_18_greater": 0,
+        "total_enrollment": 1,
+        "enrollment_score": 0.9999771104193371,
+        "inequity_score": 0,
+        "forecast_score": 0,
+        "dri_priority_score": 0,
+        "priority_score": 100.0,
+        "priority_tier": "Critical",
+        "required_centers": 1,
+        "required_staff": 1
+      }
+    ],
+    "priority_tier_distribution": {
+      "Critical": 916,
+      "High": 116,
+      "Medium": 33,
+      "Low": 4
+    },
+    "resource_allocation": {
+      "summary_by_tier": {
+        "Low": {
+          "total_enrollment": 151021,
+          "required_centers": 304,
+          "required_staff": 1513,
+          "num_districts": 4
+        },
+        "Medium": {
+          "total_enrollment": 865673,
+          "required_centers": 1746,
+          "required_staff": 8674,
+          "num_districts": 33
+        },
+        "High": {
+          "total_enrollment": 1717131,
+          "required_centers": 3492,
+          "required_staff": 17231,
+          "num_districts": 116
+        },
+        "Critical": {
+          "total_enrollment": 2658189,
+          "required_centers": 5861,
+          "required_staff": 27085,
+          "num_districts": 916
+        }
+      },
+      "total_required_centers": 11491,
+      "total_required_staff": 54940,
+      "top_priority_districts": [
+        {
+          "state": "Andaman & Nicobar Islands",
+          "district": "Nicobars",
+          "total_enrollment": 1,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "Leparada",
+          "total_enrollment": 3,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Chandigarh",
+          "district": "Rupnagar",
+          "total_enrollment": 3,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Delhi",
+          "district": "North East   *",
+          "total_enrollment": 2,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Goa",
+          "district": "Bardez",
+          "total_enrollment": 2,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Haryana",
+          "district": "Jhajjar *",
+          "total_enrollment": 1,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Himachal Pradesh",
+          "district": "Lahaul and Spiti",
+          "total_enrollment": 3,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Jammu & Kashmir",
+          "district": "Badgam",
+          "total_enrollment": 2,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Jammu & Kashmir",
+          "district": "Bandipur",
+          "total_enrollment": 2,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Jammu & Kashmir",
+          "district": "Doda",
+          "total_enrollment": 2,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Jammu & Kashmir",
+          "district": "Leh (ladakh)",
+          "total_enrollment": 3,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Jammu & Kashmir",
+          "district": "Punch",
+          "total_enrollment": 1,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Jammu & Kashmir",
+          "district": "Rajauri",
+          "total_enrollment": 2,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Jammu & Kashmir",
+          "district": "Srinagar",
+          "total_enrollment": 3,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Jammu & Kashmir",
+          "district": "Udhampur",
+          "total_enrollment": 2,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Jammu and Kashmir",
+          "district": "punch",
+          "total_enrollment": 1,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Jharkhand",
+          "district": "Bokaro *",
+          "total_enrollment": 2,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Karnataka",
+          "district": "Bijapur(KAR)",
+          "total_enrollment": 3,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Karnataka",
+          "district": "Udupi *",
+          "total_enrollment": 2,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Maharashtra",
+          "district": "Hingoli *",
+          "total_enrollment": 1,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Mizoram",
+          "district": "Hnahthial",
+          "total_enrollment": 2,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "ODISHA",
+          "district": "NUAPADA",
+          "total_enrollment": 1,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Odisha",
+          "district": "ANGUL",
+          "total_enrollment": 1,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Odisha",
+          "district": "Anugal",
+          "total_enrollment": 3,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Orissa",
+          "district": "Baleswar",
+          "total_enrollment": 3,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Orissa",
+          "district": "Kendrapara *",
+          "total_enrollment": 1,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Orissa",
+          "district": "Khorda",
+          "total_enrollment": 2,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Orissa",
+          "district": "Nabarangapur",
+          "total_enrollment": 3,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Orissa",
+          "district": "Nuapada",
+          "total_enrollment": 2,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Orissa",
+          "district": "Sundergarh",
+          "total_enrollment": 1,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Puducherry",
+          "district": "Pondicherry",
+          "total_enrollment": 3,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Rajasthan",
+          "district": "Balotra",
+          "total_enrollment": 1,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Rajasthan",
+          "district": "Beawar",
+          "total_enrollment": 1,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Rajasthan",
+          "district": "Didwana-Kuchaman",
+          "total_enrollment": 2,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Rajasthan",
+          "district": "Salumbar",
+          "total_enrollment": 1,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Sikkim",
+          "district": "Mangan",
+          "total_enrollment": 3,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Tamil Nadu",
+          "district": "Namakkal   *",
+          "total_enrollment": 1,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Tamil Nadu",
+          "district": "Tiruvarur",
+          "total_enrollment": 1,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Tamil Nadu",
+          "district": "Tuticorin",
+          "total_enrollment": 2,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Telangana",
+          "district": "Medchal?malkajgiri",
+          "total_enrollment": 2,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Uttar Pradesh",
+          "district": "Bagpat",
+          "total_enrollment": 1,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "Uttar Pradesh",
+          "district": "Raebareli",
+          "total_enrollment": 3,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "WESTBENGAL",
+          "district": "HOOGHLY",
+          "total_enrollment": 1,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "West Bengal",
+          "district": "Burdwan",
+          "total_enrollment": 2,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "West Bengal",
+          "district": "East Midnapur",
+          "total_enrollment": 1,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "West Bengal",
+          "district": "HOOGHLY",
+          "total_enrollment": 2,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "West Bengal",
+          "district": "HOWRAH",
+          "total_enrollment": 3,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "West Bengal",
+          "district": "Hooghiy",
+          "total_enrollment": 1,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "West Bengal",
+          "district": "KOLKATA",
+          "total_enrollment": 1,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        },
+        {
+          "state": "West Bengal",
+          "district": "NADIA",
+          "total_enrollment": 3,
+          "priority_score": 100.0,
+          "priority_tier": "Critical",
+          "required_centers": 1,
+          "required_staff": 1
+        }
+      ],
+      "critical_districts": 916,
+      "allocation_strategy": [
+        "PRIORITY 1: Allocate 5861 centers and 27085 staff to 916 critical districts",
+        "PRIORITY 2: Deploy 3492 centers to 116 high-priority districts"
+      ]
+    },
+    "interventions": {
+      "total_interventions": 571,
+      "by_urgency": {
+        "High": 571
+      },
+      "by_type": {
+        "Low Enrollment": 571
+      },
+      "intervention_list": [
+        {
+          "state": "100000",
+          "district": "100000",
+          "total_enrollment": 218,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andaman & Nicobar Islands",
+          "district": "Andamans",
+          "total_enrollment": 75,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andaman & Nicobar Islands",
+          "district": "Nicobars",
+          "total_enrollment": 1,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andaman & Nicobar Islands",
+          "district": "South Andaman",
+          "total_enrollment": 38,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andaman and Nicobar Islands",
+          "district": "Nicobar",
+          "total_enrollment": 75,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andaman and Nicobar Islands",
+          "district": "North And Middle Andaman",
+          "total_enrollment": 132,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andaman and Nicobar Islands",
+          "district": "South Andaman",
+          "total_enrollment": 190,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Adilabad",
+          "total_enrollment": 1419,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Alluri Sitharama Raju",
+          "total_enrollment": 1255,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Anakapalli",
+          "total_enrollment": 543,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Ananthapur",
+          "total_enrollment": 1994,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Annamayya",
+          "total_enrollment": 1021,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Bapatla",
+          "total_enrollment": 492,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Dr. B. R. Ambedkar Konaseema",
+          "total_enrollment": 665,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Eluru",
+          "total_enrollment": 629,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "K.V.Rangareddy",
+          "total_enrollment": 69,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "K.v. Rangareddy",
+          "total_enrollment": 19,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Kakinada",
+          "total_enrollment": 969,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Karim Nagar",
+          "total_enrollment": 82,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Karimnagar",
+          "total_enrollment": 659,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Khammam",
+          "total_enrollment": 1133,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Mahabub Nagar",
+          "total_enrollment": 1511,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Mahabubnagar",
+          "total_enrollment": 7,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Mahbubnagar",
+          "total_enrollment": 722,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Medak",
+          "total_enrollment": 1406,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "N. T. R",
+          "total_enrollment": 933,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Nalgonda",
+          "total_enrollment": 1167,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Nandyal",
+          "total_enrollment": 905,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Nizamabad",
+          "total_enrollment": 524,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Palnadu",
+          "total_enrollment": 860,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Parvathipuram Manyam",
+          "total_enrollment": 508,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Rangareddi",
+          "total_enrollment": 1883,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Spsr Nellore",
+          "total_enrollment": 2183,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Sri Potti Sriramulu Nellore",
+          "total_enrollment": 1614,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Sri Sathya Sai",
+          "total_enrollment": 938,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Tirupati",
+          "total_enrollment": 1719,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Visakhapatanam",
+          "total_enrollment": 226,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Warangal",
+          "total_enrollment": 1059,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Andhra Pradesh",
+          "district": "Y. S. R",
+          "total_enrollment": 823,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "Anjaw",
+          "total_enrollment": 37,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "Changlang",
+          "total_enrollment": 803,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "Dibang Valley",
+          "total_enrollment": 10,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "East Kameng",
+          "total_enrollment": 181,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "East Siang",
+          "total_enrollment": 168,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "Kamle",
+          "total_enrollment": 30,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "Kra Daadi",
+          "total_enrollment": 81,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "Kurung Kumey",
+          "total_enrollment": 75,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "Leparada",
+          "total_enrollment": 3,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "Lohit",
+          "total_enrollment": 166,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "Longding",
+          "total_enrollment": 897,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "Lower Dibang Valley",
+          "total_enrollment": 109,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "Lower Siang",
+          "total_enrollment": 31,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "Lower Subansiri",
+          "total_enrollment": 105,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "Namsai",
+          "total_enrollment": 150,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "Pakke Kessang",
+          "total_enrollment": 4,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "Papum Pare",
+          "total_enrollment": 447,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "Shi-yomi",
+          "total_enrollment": 35,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "Siang",
+          "total_enrollment": 103,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "Tawang",
+          "total_enrollment": 154,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "Tirap",
+          "total_enrollment": 99,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "Upper Siang",
+          "total_enrollment": 43,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "Upper Subansiri",
+          "total_enrollment": 143,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "West Kameng",
+          "total_enrollment": 278,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "district": "West Siang",
+          "total_enrollment": 192,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Assam",
+          "district": "Bajali",
+          "total_enrollment": 29,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Assam",
+          "district": "Biswanath",
+          "total_enrollment": 1329,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Assam",
+          "district": "Charaideo",
+          "total_enrollment": 1189,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Assam",
+          "district": "Dima Hasao",
+          "total_enrollment": 250,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Assam",
+          "district": "Majuli",
+          "total_enrollment": 515,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Assam",
+          "district": "North Cachar Hills",
+          "total_enrollment": 1058,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Assam",
+          "district": "Sibsagar",
+          "total_enrollment": 2737,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Assam",
+          "district": "Sivasagar",
+          "total_enrollment": 422,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Assam",
+          "district": "South Salmara Mankachar",
+          "total_enrollment": 1472,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Assam",
+          "district": "Sribhumi",
+          "total_enrollment": 169,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Assam",
+          "district": "Tamulpur District",
+          "total_enrollment": 55,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Assam",
+          "district": "West Karbi Anglong",
+          "total_enrollment": 1884,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Bihar",
+          "district": "Aurangabad(BH)",
+          "total_enrollment": 8,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Bihar",
+          "district": "Aurangabad(bh)",
+          "total_enrollment": 105,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Bihar",
+          "district": "Bhabua",
+          "total_enrollment": 31,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Bihar",
+          "district": "Monghyr",
+          "total_enrollment": 49,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Bihar",
+          "district": "Purba Champaran",
+          "total_enrollment": 127,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Bihar",
+          "district": "Purnea",
+          "total_enrollment": 257,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Bihar",
+          "district": "Samstipur",
+          "total_enrollment": 82,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Bihar",
+          "district": "Sheikpura",
+          "total_enrollment": 29,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Chandigarh",
+          "district": "Chandigarh",
+          "total_enrollment": 2720,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Chandigarh",
+          "district": "Rupnagar",
+          "total_enrollment": 3,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Chhattisgarh",
+          "district": "Balod",
+          "total_enrollment": 1678,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Chhattisgarh",
+          "district": "Bemetara",
+          "total_enrollment": 2771,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Chhattisgarh",
+          "district": "Dakshin Bastar Dantewada",
+          "total_enrollment": 1224,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Chhattisgarh",
+          "district": "Dantewada",
+          "total_enrollment": 710,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Chhattisgarh",
+          "district": "Dhamtari",
+          "total_enrollment": 1968,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Chhattisgarh",
+          "district": "Gariyaband",
+          "total_enrollment": 1542,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Chhattisgarh",
+          "district": "Gaurela-pendra-marwahi",
+          "total_enrollment": 140,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Chhattisgarh",
+          "district": "Gaurella Pendra Marwahi",
+          "total_enrollment": 983,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Chhattisgarh",
+          "district": "Janjgir - Champa",
+          "total_enrollment": 33,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Chhattisgarh",
+          "district": "Janjgir Champa",
+          "total_enrollment": 25,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Chhattisgarh",
+          "district": "Jashpur",
+          "total_enrollment": 2543,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Chhattisgarh",
+          "district": "Kabeerdham",
+          "total_enrollment": 955,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Chhattisgarh",
+          "district": "Kanker",
+          "total_enrollment": 1705,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        },
+        {
+          "state": "Chhattisgarh",
+          "district": "Kawardha",
+          "total_enrollment": 2142,
+          "intervention_type": "Low Enrollment",
+          "urgency": "High",
+          "recommended_action": "Increase outreach and enrollment campaigns"
+        }
+      ],
+      "immediate_action_required": 0
+    },
+    "policy_simulation": {
+      "scenario": {
+        "enrollment_increase_pct": 15,
+        "target_districts": "all",
+        "policy_name": "Universal Outreach Campaign"
+      },
+      "baseline_enrollment": 5435702,
+      "simulated_enrollment": 6251057,
+      "absolute_increase": 815355,
+      "percentage_increase": 15.0,
+      "resource_requirements": {
+        "additional_centers": 1631,
+        "additional_staff": 8154
+      },
+      "districts_affected": 1070
+    },
+    "strategic_recommendations": [
+      "URGENT: 916 districts require immediate attention. Deploy rapid response teams for enrollment acceleration.",
+      "Large-scale infrastructure needed: 11491 enrollment centers. Consider phased rollout strategy.",
+      "Implement continuous monitoring system to track policy impact and adjust strategies."
+    ]
+  }
+}

@@ -1,0 +1,185 @@
+# UIDAI Intelligence System - Configuration
+
+# Data Paths
+data:
+  raw_data_path: "C:/UIDAI-dataset"
+  processed_data_path: "./data/processed"
+  external_data_path: "./data/external"
+  
+# Output Paths
+output:
+  reports_path: "./outputs/reports"
+  models_path: "./outputs/models"
+  visualizations_path: "./outputs/visualizations"
+
+# Data Schema
+schema:
+  date_format: "%d-%m-%Y"
+  required_columns:
+    - date
+    - state
+    - district
+    - pincode
+    - age_0_5
+    - age_5_17
+    - age_18_greater
+  age_groups:
+    - age_0_5
+    - age_5_17
+    - age_18_greater
+
+# Engine 1: Data Governance & Quality
+data_governance:
+  # Extreme value detection thresholds
+  extreme_value_percentile: 99
+  iqr_multiplier: 1.5
+  z_score_threshold: 3
+  
+  # Data Reliability Index (DRI) weights
+  dri_weights:
+    completeness: 0.4
+    consistency: 0.3
+    validity: 0.3
+  
+  # Minimum acceptable DRI score
+  min_acceptable_dri: 0.7
+
+# Engine 2: Descriptive Analytics
+descriptive_analytics:
+  # Geographic concentration
+  top_n_states: 10
+  top_n_districts: 20
+  
+  # PIN-level clustering
+  n_clusters: 5
+  
+  # Inequity detection thresholds
+  child_adult_ratio_threshold: 2.0
+  underserved_enrollment_threshold: 0.5  # 50% of median
+
+# Engine 3: Anomaly Detection
+anomaly_detection:
+  # Statistical thresholds
+  z_score_threshold: 3
+  iqr_multiplier: 1.5
+  quantile_lower: 0.01
+  quantile_upper: 0.99
+  
+  # Temporal break detection
+  mom_change_threshold: 0.5  # 50% change month-over-month
+  
+  # Isolation Forest parameters
+  contamination: 0.05
+  random_state: 42
+  
+  # Severity scoring thresholds
+  severity_levels:
+    low: 1
+    medium: 2
+    high: 3
+    critical: 4
+
+# Engine 4: Forecasting
+forecasting:
+  # Forecast horizons (in months)
+  forecast_horizon_short: 3
+  forecast_horizon_long: 6
+  
+  # SARIMA parameters (will be auto-selected)
+  sarima:
+    seasonal_order: [1, 1, 1, 12]
+    
+  # XGBoost parameters
+  xgboost:
+    n_estimators: 100
+    max_depth: 6
+    learning_rate: 0.1
+    random_state: 42
+  
+  # LightGBM parameters
+  lightgbm:
+    n_estimators: 100
+    max_depth: 6
+    learning_rate: 0.1
+    random_state: 42
+  
+  # Confidence intervals
+  confidence_levels:
+    - 0.80
+    - 0.95
+  
+  # Early warning thresholds
+  surge_percentile: 95
+  
+  # Forecast accuracy metrics
+  metrics:
+    - MAPE
+    - RMSE
+    - MAE
+
+# Engine 5: Policy Impact
+policy_impact:
+  # Priority district scoring weights
+  priority_weights:
+    low_enrollment: 0.3
+    high_inequity: 0.25
+    high_forecast_demand: 0.25
+    low_dri: 0.2
+  
+  # Resource allocation parameters
+  optimal_enrollment_per_center: 500
+  optimal_enrollment_per_staff: 100
+  
+  # Intervention thresholds
+  intervention_thresholds:
+    enrollment_rate_low: 0.6  # 60% of national average
+    inequity_high: 0.7
+    forecast_surge_high: 1.5  # 150% of historical average
+
+# Visualization
+visualization:
+  # Color schemes
+  color_scheme: "viridis"
+  age_group_colors:
+    age_0_5: "#FF6B6B"
+    age_5_17: "#4ECDC4"
+    age_18_plus: "#45B7D1"
+  
+  # Map settings
+  map_center_lat: 20.5937
+  map_center_lon: 78.9629
+  map_zoom: 4
+  
+  # Dashboard settings
+  dashboard_theme: "light"
+  dashboard_port: 8501
+
+# Ethical & Compliance
+ethics:
+  # K-anonymity threshold
+  k_anonymity: 5
+  
+  # Minimum group size for reporting
+  min_group_size: 10
+  
+  # Enable audit logging
+  enable_audit_log: true
+  audit_log_path: "./outputs/audit_log.csv"
+
+# Performance
+performance:
+  # Enable caching
+  enable_caching: true
+  cache_path: "./data/cache"
+  
+  # Parallel processing
+  n_jobs: -1  # Use all available cores
+  
+  # Memory limits (in GB)
+  max_memory_gb: 16
+
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file_path: "./outputs/system.log"
