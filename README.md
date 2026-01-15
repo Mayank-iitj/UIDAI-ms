@@ -5,11 +5,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![GitHub](https://img.shields.io/github/stars/Mayank-iitj/UIDAI-ms?style=social)](https://github.com/Mayank-iitj/UIDAI-ms)
 
-**Production-Ready Analytical & Predictive Intelligence Platform for UIDAI Enrollment Data**
-
-> 🌐 **[Live Demo on Streamlit Cloud](https://your-app.streamlit.app)** ← _Replace with your deployed URL_
-
----
+**Production-Ready Analytical & Predictive Intelligence Platform for UIDAI Enrollment Data
 
 ## 🎯 Overview
 
