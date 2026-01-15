@@ -4,7 +4,15 @@ import pandas as pd
 from pathlib import Path
 import os
 import shutil
-from main import UidaiIntelligenceSystem
+import sys
+
+# Error handling for imports
+try:
+    from main import UidaiIntelligenceSystem
+except ImportError as e:
+    st.error(f"Failed to import main system: {e}")
+    st.info("Please ensure all dependencies are installed: `pip install -r requirements.txt`")
+    st.stop()
 
 # Page Config
 st.set_page_config(
@@ -14,40 +22,106 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom Styling
+# Custom Styling with Enhanced UX
 st.markdown("""
 <style>
-    .main {
-        background-color: #f8f9fa;
+    /* Loading Animation */
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
     }
+    
+    .stSpinner > div {
+        animation: pulse 1.5s ease-in-out infinite;
+    }
+    
+    /* Improved Metrics */
     .stMetric {
         background-color: white;
         padding: 15px;
         border-radius: 10px;
-        box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
     }
+    
+    .stMetric:hover {
+        transform: translateY(-2px);
+        box-shadow: 2px 4px 15px rgba(0,0,0,0.15);
+    }
+    
     /* Force text color to black for all metric elements */
     [data-testid="stMetricValue"], 
     [data-testid="stMetricLabel"], 
     [data-testid="stMetricDelta"] {
         color: #000000 !important;
     }
+    
     div[data-testid="metric-container"] * {
         color: #000000 !important;
     }
+    
+    /* Typography */
     h1, h2, h3 {
         color: #2c3e50;
+        font-weight: 600;
     }
-    .big-font {
-        font-size: 20px !important;
-        font-weight: bold;
-    }
+    
+    /* Report Box */
     .report-box {
-        background-color: #e3f2fd;
+        background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
         padding: 20px;
         border-radius: 10px;
         border-left: 5px solid #2196f3;
         margin-bottom: 20px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+        .stMetric {
+            padding: 10px;
+        }
+        h1 {
+            font-size: 1.5rem;
+        }
+        .report-box {
+            padding: 15px;
+        }
+    }
+    
+    /* Button Enhancements */
+    .stButton > button {
+        transition: all 0.3s ease;
+    }
+    
+    .stButton > button:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    /* Footer */
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 10px;
+        text-align: center;
+        font-size: 0.9rem;
+        border-top: 1px solid #e0e0e0;
+        backdrop-filter: blur(10px);
+        z-index: 999;
+    }
+    
+    .footer a {
+        color: #2196f3;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    
+    .footer a:hover {
+        text-decoration: underline;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -227,21 +301,34 @@ st.sidebar.markdown("---")
 st.sidebar.header("👨‍💻 Team Antigravity")
 st.sidebar.caption("Solutions for a Digital India")
 
-# Load Helpers
+# Load Helpers with Enhanced Error Handling
+@st.cache_data(ttl=3600)  # Cache for 1 hour
 def load_latest_report():
-    report_dir = Path("outputs/reports")
-    if not report_dir.exists(): return None
-    json_files = list(report_dir.glob("*.json"))
-    if not json_files: return None
-    latest_file = max(json_files, key=os.path.getctime)
-    with open(latest_file, 'r') as f: return json.load(f)
+    """Load the most recent intelligence report."""
+    try:
+        report_dir = Path("outputs/reports")
+        if not report_dir.exists(): 
+            return None
+        json_files = list(report_dir.glob("intelligence_report_*.json"))
+        if not json_files: 
+            return None
+        latest_file = max(json_files, key=os.path.getctime)
+        with open(latest_file, 'r', encoding='utf-8') as f: 
+            return json.load(f)
+    except Exception as e:
+        st.error(f"Error loading report: {e}")
+        return None
 
-@st.cache_data
+@st.cache_data(ttl=3600)  # Cache for 1 hour
 def load_dataframe():
-    from utils.data_loader import UidaiDataLoader
-    loader = UidaiDataLoader()
-    try: return loader.load_all_data()
-    except: return pd.DataFrame()
+    """Load the UIDAI dataset."""
+    try:
+        from utils.data_loader import UidaiDataLoader
+        loader = UidaiDataLoader()
+        return loader.load_all_data()
+    except Exception as e:
+        st.warning(f"Could not load default dataset: {e}")
+        return pd.DataFrame()
 
 report = load_latest_report()
 df = load_dataframe()
@@ -250,14 +337,26 @@ if not report:
     st.warning("Please run the analysis pipeline to generate intelligence.")
     st.stop()
 
-# Helper for images
+# Helper for images with caching
 vis_dir = Path("outputs/visualizations")
+
+@st.cache_data
+def load_image(filepath):
+    """Cache image loading for better performance."""
+    from PIL import Image
+    return Image.open(filepath)
+
 def show_image(filename, caption):
+    """Display visualization with error handling."""
     path = vis_dir / filename
-    if path.exists():
-        st.image(str(path), caption=caption, use_container_width=True)
-    else:
-        st.warning(f"Plot {filename} not generating (Check Data Sufficiency)")
+    try:
+        if path.exists():
+            img = load_image(str(path))
+            st.image(img, caption=caption, use_container_width=True)
+        else:
+            st.info(f"📊 Visualization '{filename}' will be generated after running analysis.")
+    except Exception as e:
+        st.warning(f"Could not display {filename}: {e}")
 
 # --- APP TABS ---
 # Executive Brief is Tab 1 (Hackathon Req 11)
@@ -540,6 +639,28 @@ with tab_raw:
     st.dataframe(filt_df)
     st.download_button("Download Data CSV", filt_df.to_csv(index=False), "filtered_data.csv")
 
-# Footer
+# Enhanced Footer with GitHub Link
 st.markdown("---")
-st.caption("UIDAI Intelligence System v2.0 | 'Hackathon Ready' Build | Team Antigravity")
+
+footer_col1, footer_col2, footer_col3 = st.columns([1, 2, 1])
+
+with footer_col1:
+    st.caption("🇮🇳 UIDAI Intelligence System v2.0")
+
+with footer_col2:
+    st.caption("Built with ❤️ by [Mayank Sharma](https://mayyanks.app) | IIT Jodhpur")
+
+with footer_col3:
+    st.caption("⭐ [GitHub](https://github.com/Mayank-iitj/UIDAI-ms)")
+
+st.caption("")
+st.markdown(
+    """
+    <div class="footer">
+        Developed by <a href="https://mayyanks.app" target="_blank">Mayank Sharma</a> (IIT Jodhpur) | 
+        <a href="https://github.com/Mayank-iitj/UIDAI-ms" target="_blank">⭐ Star on GitHub</a> | 
+        UIDAI Data Hackathon 2026
+    </div>
+    """,
+    unsafe_allow_html=True
+)

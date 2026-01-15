@@ -1,10 +1,39 @@
 # UIDAI Intelligence System
 
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/downloads/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.28%2B-FF4B4B.svg)](https://streamlit.io)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![GitHub](https://img.shields.io/github/stars/Mayank-iitj/UIDAI-ms?style=social)](https://github.com/Mayank-iitj/UIDAI-ms)
+
 **Production-Ready Analytical & Predictive Intelligence Platform for UIDAI Enrollment Data**
+
+> 🌐 **[Live Demo on Streamlit Cloud](https://your-app.streamlit.app)** ← _Replace with your deployed URL_
+
+---
 
 ## 🎯 Overview
 
 The UIDAI Intelligence System is a comprehensive, production-ready analytical platform designed to extract actionable insights from Aadhaar enrollment data. The system combines statistical analysis, machine learning, and forecasting to support data-driven policy decisions and operational planning for the Unique Identification Authority of India (UIDAI).
+
+### ⚡ Quick Start - Deploy to Streamlit Cloud
+
+Deploy your own instance in 5 minutes:
+
+1. **Fork this repository**
+2. **Sign in to [Streamlit Cloud](https://share.streamlit.io)**
+3. **Deploy**: Select this repo, branch `main`, file `streamlit_app.py`
+4. **Done!** Your app will be live at `https://[your-app].streamlit.app`
+
+📖 **[Full Deployment Guide](STREAMLIT_CLOUD.md)**
+
+### 🎨 Features
+
+✅ **5 Analytical Engines**: Data Governance, Descriptive Analytics, Anomaly Detection, Forecasting, Policy Impact  
+✅ **Interactive Dashboard**: Beautiful Streamlit interface  
+✅ **Sample Data Generator**: Test without real data  
+✅ **File Upload**: Analyze your own datasets  
+✅ **Export Reports**: PDF, JSON, TXT formats  
+✅ **Mobile Responsive**: Works on all devices
 
 ## 🏗️ Architecture
 

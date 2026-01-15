@@ -1,0 +1,3 @@
+# System-level dependencies for Streamlit Cloud (Debian-based)
+# Add any required system packages here
+# Example: build-essential, libpq-dev, etc.

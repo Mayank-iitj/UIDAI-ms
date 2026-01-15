@@ -1,13 +1,22 @@
 [theme]
-primaryColor = "#D33682"  # Magenta pink for accents and interactions
-backgroundColor = "#002B36"  # Base02 dark blue-gray for primary background
-secondaryBackgroundColor = "#586E75"  # Base01 mid gray for panels and sidebars
-textColor = "#FAFACA"  # Base3 warm off-white for high readability
-font = "monospace"  # Perfect for code blocks and technical UIs
+primaryColor = "#FF6B6B"  # Vibrant red for accents and interactions
+backgroundColor = "#0E1117"  # Dark background for modern look
+secondaryBackgroundColor = "#262730"  # Lighter dark for panels and sidebars
+textColor = "#FAFAFA"  # Off-white for high readability
+font = "sans serif"  # Clean, professional font
 
-[ui]
-hideTopBar = false
-hideSidebarNav = false
+[server]
+maxUploadSize = 200  # Allow larger file uploads (200MB)
+enableXsrfProtection = true
+enableCORS = false
 
 [browser]
 gatherUsageStats = false
+
+[runner]
+magicEnabled = true
+fastReruns = true
+
+[client]
+showErrorDetails = true
+toolbarMode = "auto"
