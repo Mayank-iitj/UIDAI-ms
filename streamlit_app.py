@@ -63,40 +63,165 @@ with col_title:
 # Sidebar
 st.sidebar.header("🕹️ System Controls")
 
-# File Uploader
-uploaded_file = st.sidebar.file_uploader("Upload Enrollment Data (CSV)", type=['csv'])
+# Data Source Selection
+data_source = st.sidebar.radio(
+    "Select Data Source",
+    ["📁 Upload CSV", "🗃️ Use Default Dataset", "📊 Generate Sample Data"],
+    index=1
+)
 
-# Drill-Down Filters (Hackathon Requirement 4)
-st.sidebar.header("🔍 Drill-Down")
-# Determine available states/districts - Load basic metadata if possible without full pipeline run
-# For simplicity, we filter AFTER loading the report/df. 
-# Ideally, interactive filtering requires reloading the charts. 
-# Since charts are static, we might need to re-run visualization or handle filtering in the future.
-# For now, let's just show the selectors as "Global Filters" for the Data Table if nothing else.
+uploaded_file = None
+input_path = None
 
-if st.sidebar.button("▶️ Run Analysis Pipeline"):
+if data_source == "📁 Upload CSV":
+    st.sidebar.markdown("---")
+    st.sidebar.subheader("📤 Upload Your Dataset")
+    
+    uploaded_file = st.sidebar.file_uploader(
+        "Upload Enrollment Data (CSV)", 
+        type=['csv'],
+        help="Upload a CSV file with enrollment data. The system will auto-detect columns."
+    )
+    
+    if uploaded_file:
+        # Show data preview
+        try:
+            preview_df = pd.read_csv(uploaded_file)
+            uploaded_file.seek(0)  # Reset for later use
+            
+            st.sidebar.success(f"✅ Loaded: {uploaded_file.name}")
+            st.sidebar.write(f"📊 Rows: {len(preview_df):,} | Columns: {len(preview_df.columns)}")
+            
+            # Show column mapping
+            with st.sidebar.expander("🔧 Column Mapping", expanded=False):
+                st.write("Map your columns to required fields:")
+                
+                required_cols = ['date', 'state', 'district', 'pincode', 'age_0_5', 'age_5_17', 'age_18_greater']
+                available_cols = ['Auto-detect'] + list(preview_df.columns)
+                
+                column_mapping = {}
+                for req_col in required_cols:
+                    # Try to auto-detect matching column
+                    default_idx = 0
+                    for i, col in enumerate(available_cols):
+                        if col.lower().replace(' ', '_').replace('-', '_') == req_col.lower():
+                            default_idx = i
+                            break
+                    
+                    column_mapping[req_col] = st.selectbox(
+                        f"{req_col}:",
+                        available_cols,
+                        index=default_idx,
+                        key=f"map_{req_col}"
+                    )
+                
+                # Store mapping in session
+                st.session_state['column_mapping'] = column_mapping
+            
+            # Data preview
+            with st.sidebar.expander("👁️ Data Preview", expanded=False):
+                st.dataframe(preview_df.head(5), height=150)
+            
+            # Validation status
+            missing_cols = []
+            for col in ['date', 'state', 'district']:
+                if col not in [c.lower() for c in preview_df.columns]:
+                    found = False
+                    for c in preview_df.columns:
+                        if col in c.lower():
+                            found = True
+                            break
+                    if not found:
+                        missing_cols.append(col)
+            
+            if missing_cols:
+                st.sidebar.warning(f"⚠️ May need mapping: {', '.join(missing_cols)}")
+            else:
+                st.sidebar.success("✅ Schema looks compatible!")
+                
+        except Exception as e:
+            st.sidebar.error(f"Error reading file: {e}")
+
+elif data_source == "📊 Generate Sample Data":
+    st.sidebar.markdown("---")
+    st.sidebar.subheader("🎲 Sample Data Generator")
+    
+    sample_size = st.sidebar.slider("Number of records", 100, 10000, 1000, step=100)
+    
+    if st.sidebar.button("Generate Sample Dataset"):
+        import numpy as np
+        from datetime import datetime, timedelta
+        
+        np.random.seed(42)
+        states = ['Uttar Pradesh', 'Bihar', 'Maharashtra', 'Karnataka', 'Gujarat', 
+                 'Rajasthan', 'Madhya Pradesh', 'West Bengal', 'Tamil Nadu', 'Andhra Pradesh']
+        districts = ['District_' + str(i) for i in range(1, 51)]
+        
+        sample_data = {
+            'date': [(datetime(2025, 1, 1) + timedelta(days=np.random.randint(0, 365))).strftime('%d-%m-%Y') 
+                    for _ in range(sample_size)],
+            'state': np.random.choice(states, sample_size),
+            'district': np.random.choice(districts, sample_size),
+            'pincode': np.random.randint(100000, 999999, sample_size),
+            'age_0_5': np.random.randint(0, 500, sample_size),
+            'age_5_17': np.random.randint(0, 400, sample_size),
+            'age_18_greater': np.random.randint(0, 100, sample_size)
+        }
+        
+        sample_df = pd.DataFrame(sample_data)
+        sample_df['total_enrollment'] = sample_df['age_0_5'] + sample_df['age_5_17'] + sample_df['age_18_greater']
+        
+        # Save to temp file
+        temp_dir = Path("temp_uploads")
+        temp_dir.mkdir(exist_ok=True)
+        sample_path = temp_dir / "sample_data.csv"
+        sample_df.to_csv(sample_path, index=False)
+        
+        st.session_state['generated_sample_path'] = str(sample_path)
+        st.sidebar.success(f"✅ Generated {sample_size:,} records!")
+        st.sidebar.dataframe(sample_df.head(), height=150)
+
+st.sidebar.markdown("---")
+
+# Drill-Down Filters
+st.sidebar.header("🔍 Drill-Down Filters")
+
+if st.sidebar.button("▶️ Run Analysis Pipeline", type="primary"):
     with st.spinner("Initializing Intelligence System..."):
         try:
             system = UidaiIntelligenceSystem()
             input_path = None
-            if uploaded_file:
+            
+            # Handle different data sources
+            if data_source == "📁 Upload CSV" and uploaded_file:
                 temp_dir = Path("temp_uploads")
                 temp_dir.mkdir(exist_ok=True)
                 input_path = temp_dir / uploaded_file.name
                 with open(input_path, "wb") as f:
                     f.write(uploaded_file.getbuffer())
-                st.sidebar.success(f"Uploaded: {uploaded_file.name}")
+                st.sidebar.success(f"📂 Using: {uploaded_file.name}")
+                
+            elif data_source == "📊 Generate Sample Data" and 'generated_sample_path' in st.session_state:
+                input_path = Path(st.session_state['generated_sample_path'])
+                st.sidebar.success("📂 Using: Generated Sample Data")
+            else:
+                st.sidebar.info("📂 Using: Default UIDAI Dataset")
             
-            with st.spinner("Running Engines..."):
+            with st.spinner("Running 5 Analytical Engines..."):
                 report, df = system.run_pipeline(input_file=input_path)
             
-            if input_path and input_path.exists():
-                shutil.rmtree(temp_dir)
+            # Cleanup temp files
+            if input_path and input_path.exists() and 'temp_uploads' in str(input_path):
+                try:
+                    shutil.rmtree(Path("temp_uploads"))
+                except:
+                    pass
                 
-            st.sidebar.success("Analysis Complete!")
+            st.sidebar.success("✅ Analysis Complete!")
             st.rerun()
         except Exception as e:
             st.error(f"Pipeline Failed: {e}")
+            st.exception(e)
 
 st.sidebar.markdown("---")
 st.sidebar.header("👨‍💻 Team Antigravity")
