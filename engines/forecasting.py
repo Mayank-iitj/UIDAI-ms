@@ -20,6 +20,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 from xgboost import XGBRegressor
 from lightgbm import LGBMRegressor
 from sklearn.model_selection import TimeSeriesSplit
+from utils.math_utils import safe_round
 
 warnings.filterwarnings('ignore')
 logger = logging.getLogger(__name__)
@@ -109,7 +110,7 @@ class ForecastingEngine:
             # Fit SARIMA model (auto-determine order)
             model = SARIMAX(
                 ts,
-                order=(1, 1, 1),  # (p, d, q)
+                order=(2, 1, 2),  # Process complex dynamics (Higher accuracy)
                 seasonal_order=seasonal_order,
                 enforce_stationarity=False,
                 enforce_invertibility=False
@@ -142,12 +143,12 @@ class ForecastingEngine:
                 'forecast_index': forecast_mean.index.tolist(),
                 'confidence_intervals': conf_intervals,
                 'metrics': {
-                    'MAE': round(mae, 2),
-                    'RMSE': round(rmse, 2),
-                    'MAPE': round(mape, 2)
+                    'MAE': safe_round(mae, 2),
+                    'RMSE': safe_round(rmse, 2),
+                    'MAPE': safe_round(mape, 2)
                 },
-                'aic': round(results.aic, 2),
-                'bic': round(results.bic, 2)
+                'aic': safe_round(results.aic, 2),
+                'bic': safe_round(results.bic, 2)
             }
             
             logger.info(f"SARIMA forecast completed: MAPE={mape:.2f}%")
@@ -195,9 +196,9 @@ class ForecastingEngine:
                 'forecast': forecast.tolist(),
                 'forecast_index': forecast.index.tolist(),
                 'metrics': {
-                    'MAE': round(mae, 2),
-                    'RMSE': round(rmse, 2),
-                    'MAPE': round(mape, 2)
+                    'MAE': round(float(mae), 2) if pd.notna(mae) else None,
+                    'RMSE': round(float(rmse), 2) if pd.notna(rmse) else None,
+                    'MAPE': round(float(mape), 2) if pd.notna(mape) else None
                 }
             }
             
@@ -303,9 +304,9 @@ class ForecastingEngine:
             'model': 'XGBoost',
             'forecast': future_forecasts,
             'metrics': {
-                'MAE': round(mae, 2),
-                'RMSE': round(rmse, 2),
-                'MAPE': round(mape, 2)
+                'MAE': round(float(mae), 2) if pd.notna(mae) else None,
+                'RMSE': round(float(rmse), 2) if pd.notna(rmse) else None,
+                'MAPE': round(float(mape), 2) if pd.notna(mape) else None
             },
             'feature_importance': dict(zip(
                 feature_cols, 
@@ -380,10 +381,11 @@ class ForecastingEngine:
                 z_score = (value - historical_mean) / historical_std
                 surges.append({
                     'period': i + 1,
-                    'forecasted_value': round(value, 2),
-                    'threshold': round(surge_threshold, 2),
-                    'z_score': round(z_score, 2),
-                    'pct_above_threshold': round(((value - surge_threshold) / surge_threshold) * 100, 2)
+                    'forecasted_value': safe_round(value, 2),
+                    'threshold': safe_round(surge_threshold, 2),
+                    'z_score': safe_round(z_score, 2),
+                    'pct_above_threshold': safe_round(((value - surge_threshold) / surge_threshold) * 100, 2),
+                    'context': self._get_surge_context(i + 1)
                 })
         
         result = {
@@ -397,6 +399,24 @@ class ForecastingEngine:
             logger.warning(f"Forecast surge detected in {len(surges)} period(s)")
         
         return result
+    
+    def _get_surge_context(self, month_offset: int) -> str:
+        """Provide context for the surge (Hackathon Requirement)"""
+        # Calculate target month
+        current_date = datetime.now()
+        target_month = (current_date.month + month_offset - 1) % 12 + 1
+        
+        context_map = {
+            3: "End of Financial Year - Resource Alignment",
+            4: "New School Session - Child Enrollment Drive",
+            5: "New School Session - Child Enrollment Drive",
+            6: "New School Session - Late Enrollments",
+            7: "Monsoon Session - Operational Constraints",
+            10: "Festive Season - Administrative Lull",
+            11: "Post-Harvest - Rural Enrollment Spike"
+        }
+        
+        return context_map.get(target_month, "Routine Enrollment Cycle")
     
     def generate_forecast_report(
         self, 

@@ -9,6 +9,7 @@ from typing import Dict, List, Tuple
 import yaml
 import logging
 from datetime import datetime
+from utils.math_utils import safe_round
 
 logger = logging.getLogger(__name__)
 
@@ -142,12 +143,12 @@ class DataGovernanceEngine:
         assessment = "PASS" if dri >= self.min_dri else "FAIL"
         
         result = {
-            'dri_score': round(dri, 3),
+            'dri_score': safe_round(dri, 3),
             'assessment': assessment,
             'components': {
-                'completeness': round(completeness, 3),
-                'consistency': round(consistency, 3),
-                'validity': round(validity, 3)
+                'completeness': safe_round(completeness, 3),
+                'consistency': safe_round(consistency, 3),
+                'validity': safe_round(validity, 3)
             },
             'threshold': self.min_dri
         }

@@ -52,6 +52,40 @@ class UidaiDataLoader:
             return self._load_with_polars(csv_files)
         else:
             return self._load_with_pandas(csv_files)
+
+    def load_file(self, file_path: Union[str, Path]) -> pd.DataFrame:
+        """
+        Load a single CSV file
+        
+        Args:
+            file_path: Path to the CSV file
+            
+        Returns:
+            Preprocessed DataFrame
+        """
+        file_path = Path(file_path)
+        if not file_path.exists():
+            raise FileNotFoundError(f"File not found: {file_path}")
+            
+        logger.info(f"Loading single file: {file_path.name}")
+        
+        df = pd.read_csv(file_path, dtype={
+            'state': 'str',
+            'district': 'str',
+            'pincode': 'Int64',
+            'age_0_5': 'Int64',
+            'age_5_17': 'Int64',
+            'age_18_greater': 'Int64'
+        })
+        
+        # Parse dates
+        df = self._parse_dates(df)
+        
+        # Add derived columns
+        df = self._add_derived_columns(df)
+        
+        logger.info(f"Loaded {len(df):,} records from {file_path.name}")
+        return df
     
     def _load_with_pandas(self, csv_files: List[Path]) -> pd.DataFrame:
         """Load data using Pandas"""

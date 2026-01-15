@@ -1,0 +1,13 @@
+[theme]
+primaryColor = "#D33682"  # Magenta pink for accents and interactions
+backgroundColor = "#002B36"  # Base02 dark blue-gray for primary background
+secondaryBackgroundColor = "#586E75"  # Base01 mid gray for panels and sidebars
+textColor = "#FAFACA"  # Base3 warm off-white for high readability
+font = "monospace"  # Perfect for code blocks and technical UIs
+
+[ui]
+hideTopBar = false
+hideSidebarNav = false
+
+[browser]
+gatherUsageStats = false

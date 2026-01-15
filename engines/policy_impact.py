@@ -8,6 +8,7 @@ import numpy as np
 from typing import Dict, List, Tuple
 import yaml
 import logging
+from utils.math_utils import safe_round
 
 logger = logging.getLogger(__name__)
 
@@ -329,7 +330,7 @@ class PolicyImpactEngine:
             'baseline_enrollment': int(baseline_total),
             'simulated_enrollment': int(simulated_total),
             'absolute_increase': int(absolute_increase),
-            'percentage_increase': round((absolute_increase / baseline_total) * 100, 2),
+            'percentage_increase': safe_round((absolute_increase / baseline_total) * 100, 2) if pd.notna(baseline_total) and baseline_total != 0 else 0.0,
             'resource_requirements': {
                 'additional_centers': int(additional_centers),
                 'additional_staff': int(additional_staff)

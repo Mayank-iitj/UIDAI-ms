@@ -69,7 +69,7 @@ anomaly_detection:
   mom_change_threshold: 0.5  # 50% change month-over-month
   
   # Isolation Forest parameters
-  contamination: 0.05
+  contamination: 0.04  # Slightly lower to reduce false positives
   random_state: 42
   
   # Severity scoring thresholds
@@ -91,14 +91,14 @@ forecasting:
     
   # XGBoost parameters
   xgboost:
-    n_estimators: 100
+    n_estimators: 300  # Increased for better learning
     max_depth: 6
     learning_rate: 0.1
     random_state: 42
   
   # LightGBM parameters
   lightgbm:
-    n_estimators: 100
+    n_estimators: 300  # Increased for better learning
     max_depth: 6
     learning_rate: 0.1
     random_state: 42

@@ -10,6 +10,7 @@ import yaml
 import logging
 from sklearn.cluster import KMeans
 from scipy import stats
+from utils.math_utils import safe_round
 
 logger = logging.getLogger(__name__)
 
@@ -89,7 +90,7 @@ class DescriptiveAnalyticsEngine:
             'top_states': top_states.to_dict('index'),
             'top_districts': top_districts.to_dict('records'),
             'concentration': {
-                'gini_coefficient': round(gini, 3),
+                'gini_coefficient': safe_round(gini, 3),
                 'interpretation': self._interpret_gini(gini)
             },
             'coverage': {
@@ -146,11 +147,33 @@ class DescriptiveAnalyticsEngine:
                 'states': adult_heavy.to_dict('index')
             })
         
+        # Calculate Child-Adult Ratio (Hackathon Requirement)
+        children = 0
+        adults = 0
+        for col in age_cols:
+            if '0_5' in col or '5_17' in col:
+                children += totals.get(col, 0)
+            elif '18' in col:
+                adults += totals.get(col, 0)
+        
+        child_adult_ratio = safe_round(children / adults, 2) if adults > 0 else 0
+        
+        # Identify Adult Inclusion Gaps
+        adult_gap = "Low"
+        if child_adult_ratio > 1.5:  # Arbitrary threshold for demo
+            adult_gap = "Critical - High Child/Adult Skew"
+        elif child_adult_ratio > 1.0:
+            adult_gap = "Moderate"
+        
         result = {
             'overall': {
                 'totals': totals,
                 'proportions': proportions,
                 'grand_total': grand_total
+            },
+            'ratios': {
+                'child_adult_ratio': child_adult_ratio,
+                'adult_inclusion_gap': adult_gap
             },
             'unusual_distributions': unusual_states,
             'state_summary': state_age.to_dict('index')

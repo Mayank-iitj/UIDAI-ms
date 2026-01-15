@@ -8,6 +8,7 @@ import yaml
 import logging
 from pathlib import Path
 from datetime import datetime
+from typing import Tuple, Dict, Optional
 import json
 
 # Import all engines
@@ -70,10 +71,13 @@ class UidaiIntelligenceSystem:
         logger.info("System initialized successfully!")
         logger.info("="*60)
     
-    def run_pipeline(self) -> Tuple[Dict, pd.DataFrame]:
+    def run_pipeline(self, input_file: Optional[Path] = None) -> Tuple[Dict, pd.DataFrame]:
         """
         Run the complete intelligence pipeline
         
+        Args:
+            input_file: Optional path to a single CSV file to analyze
+            
         Returns:
             Tuple of (Complete analysis results, Main dataframe)
         """
@@ -82,7 +86,14 @@ class UidaiIntelligenceSystem:
         # Stage 1: Load and validate data
         logger.info("\n[STAGE 1] Data Loading & Governance")
         logger.info("-" * 60)
-        df = self.data_loader.load_all_data()
+        
+        if input_file:
+            logger.info(f"Processing uploaded file: {input_file}")
+            df = self.data_loader.load_file(input_file)
+        else:
+            logger.info("Processing default dataset from raw directory")
+            df = self.data_loader.load_all_data()
+            
         logger.info(f"Loaded {len(df):,} records")
         
         # Run data governance

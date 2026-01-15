@@ -226,7 +226,8 @@ class AnomalyDetectionEngine:
         iso_forest = IsolationForest(
             contamination=self.contamination,
             random_state=self.random_state,
-            n_estimators=100
+            n_estimators=300,
+            max_samples='auto'
         )
         
         # Predict (-1 for anomalies, 1 for normal)
@@ -284,6 +285,27 @@ class AnomalyDetectionEngine:
                 return self.severity_levels['critical']
         
         df_scored['severity_score'] = df_scored.apply(assign_severity, axis=1)
+        
+        # Reason Classification (Hackathon Requirement)
+        def assign_reason(row):
+            if row['severity_score'] == 0:
+                return "Normal"
+            
+            # Data Quality Issue (High Z-score but low count or missing fields)
+            if row.get('max_zscore', 0) > 4:
+                return "Potential Data Quality Error"
+            
+            # Operational Issue (Specific center drift)
+            if row.get('has_temporal_anomaly'):
+                return "Operational Batch Delay"
+                
+            # Geographic/Policy (Regional deviation)
+            if row.get('has_geographic_anomaly'):
+                 return "Regional Policy Variance"
+            
+            return "Unclassified Anomaly"
+
+        df_scored['anomaly_reason'] = df_scored.apply(assign_reason, axis=1)
         
         # Severity label
         severity_map = {
