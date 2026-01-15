@@ -261,13 +261,14 @@ def show_image(filename, caption):
 
 # --- APP TABS ---
 # Executive Brief is Tab 1 (Hackathon Req 11)
-tab_exec, tab_trends, tab_anomalies, tab_forecast, tab_policy, tab_raw = st.tabs([
+tab_exec, tab_trends, tab_anomalies, tab_forecast, tab_policy, tab_report, tab_raw = st.tabs([
     "📋 Executive Brief", 
     "📈 Trends & Demographics", 
     "🔍 Anomaly Detection", 
     "🔮 Forecast", 
     "🛡️ Policy Impact",
-    "📝 Raw Data"
+    "� Full Report",
+    "�📝 Raw Data"
 ])
 
 # --- TAB 1: EXECUTIVE BRIEF ---
@@ -388,7 +389,138 @@ with tab_policy:
     st.write(f"**Total New Centers Required:** {res.get('total_required_centers', 0):,}")
     st.write(f"**Additional Staff Needed:** {res.get('total_required_staff', 0):,}")
 
-# --- TAB 6: RAW DATA ---
+# --- TAB 6: FULL REPORT ---
+with tab_report:
+    st.subheader("📄 Complete Intelligence Report")
+    
+    # Report file listing
+    report_dir = Path("outputs/reports")
+    
+    col_summary, col_download = st.columns([2, 1])
+    
+    with col_summary:
+        st.markdown("### 📝 Executive Summary")
+        
+        # Find latest executive summary
+        txt_files = list(report_dir.glob("executive_summary_*.txt"))
+        if txt_files:
+            latest_txt = max(txt_files, key=os.path.getctime)
+            with open(latest_txt, 'r', encoding='utf-8') as f:
+                summary_text = f.read()
+            
+            # Display in expandable container
+            with st.expander("View Executive Summary", expanded=True):
+                st.text(summary_text)
+        else:
+            st.info("No executive summary found. Run the pipeline first.")
+    
+    with col_download:
+        st.markdown("### 📥 Download Reports")
+        
+        # PDF download
+        pdf_files = list(report_dir.glob("intelligence_report_*.pdf"))
+        if pdf_files:
+            latest_pdf = max(pdf_files, key=os.path.getctime)
+            with open(latest_pdf, 'rb') as f:
+                pdf_bytes = f.read()
+            st.download_button(
+                "📕 Download PDF Report",
+                pdf_bytes,
+                file_name=latest_pdf.name,
+                mime="application/pdf",
+                use_container_width=True
+            )
+        
+        # JSON download
+        json_files = list(report_dir.glob("intelligence_report_*.json"))
+        if json_files:
+            latest_json = max(json_files, key=os.path.getctime)
+            with open(latest_json, 'r') as f:
+                json_content = f.read()
+            st.download_button(
+                "📊 Download JSON Report",
+                json_content,
+                file_name=latest_json.name,
+                mime="application/json",
+                use_container_width=True
+            )
+        
+        # TXT summary download
+        if txt_files:
+            with open(latest_txt, 'r', encoding='utf-8') as f:
+                txt_content = f.read()
+            st.download_button(
+                "📝 Download Summary (TXT)",
+                txt_content,
+                file_name=latest_txt.name,
+                mime="text/plain",
+                use_container_width=True
+            )
+    
+    st.markdown("---")
+    
+    # Full JSON Report Viewer
+    st.markdown("### 🔍 Interactive Report Explorer")
+    
+    report_sections = [
+        "Select Section...",
+        "📋 Metadata",
+        "🔒 Data Governance",
+        "📊 Descriptive Analytics",
+        "🔍 Anomaly Detection",
+        "🔮 Forecasting",
+        "🛡️ Policy Impact"
+    ]
+    
+    selected_section = st.selectbox("Explore Report Section", report_sections)
+    
+    if selected_section == "📋 Metadata":
+        st.json(report.get('metadata', {}))
+    elif selected_section == "🔒 Data Governance":
+        st.json(report.get('data_governance', {}))
+    elif selected_section == "📊 Descriptive Analytics":
+        # Show summary, not full data
+        desc = report.get('descriptive_analytics', {})
+        st.write("**Coverage:**", desc.get('geographic_patterns', {}).get('coverage', {}))
+        st.write("**Age Demographics:**", desc.get('age_demographics', {}).get('overall', {}))
+        with st.expander("View Full Section"):
+            st.json(desc)
+    elif selected_section == "🔍 Anomaly Detection":
+        anomaly = report.get('anomaly_detection', {})
+        st.write("**Summary:**", anomaly.get('summary', {}))
+        with st.expander("View Full Section"):
+            st.json(anomaly)
+    elif selected_section == "🔮 Forecasting":
+        forecast = report.get('forecasting', {})
+        st.write("**Horizon:**", forecast.get('forecast_horizon', 'N/A'), "months")
+        st.write("**Surge Detected:**", forecast.get('surge_detection', {}).get('surge_detected', False))
+        with st.expander("View Full Section"):
+            st.json(forecast)
+    elif selected_section == "🛡️ Policy Impact":
+        policy = report.get('policy_impact', {})
+        st.write("**Strategic Recommendations:**")
+        for rec in policy.get('strategic_recommendations', [])[:5]:
+            st.markdown(f"- {rec}")
+        with st.expander("View Full Section"):
+            st.json(policy)
+    
+    # List all generated reports
+    st.markdown("---")
+    st.markdown("### 📁 All Generated Reports")
+    
+    all_reports = list(report_dir.glob("*"))
+    if all_reports:
+        report_data = []
+        for rp in sorted(all_reports, key=os.path.getctime, reverse=True):
+            report_data.append({
+                "File": rp.name,
+                "Type": rp.suffix.upper(),
+                "Size": f"{rp.stat().st_size / 1024:.1f} KB",
+                "Created": pd.to_datetime(os.path.getctime(rp), unit='s').strftime('%Y-%m-%d %H:%M')
+            })
+        st.dataframe(pd.DataFrame(report_data), use_container_width=True, hide_index=True)
+
+# --- TAB 7: RAW DATA ---
 with tab_raw:
     st.markdown("### Filtered Dataset")
     
@@ -407,7 +539,6 @@ with tab_raw:
         
     st.dataframe(filt_df)
     st.download_button("Download Data CSV", filt_df.to_csv(index=False), "filtered_data.csv")
-    st.json(report)
 
 # Footer
 st.markdown("---")
