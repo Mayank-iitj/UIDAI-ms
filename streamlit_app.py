@@ -4,124 +4,50 @@ import pandas as pd
 from pathlib import Path
 import os
 import shutil
-import sys
-
-# Error handling for imports
-try:
-    from main import UidaiIntelligenceSystem
-except ImportError as e:
-    st.error(f"Failed to import main system: {e}")
-    st.info("Please ensure all dependencies are installed: `pip install -r requirements.txt`")
-    st.stop()
+from main import UidaiIntelligenceSystem
 
 # Page Config
 st.set_page_config(
-    page_title="UIDAI Intelligence System (Hackathon Edition)",
+    page_title="UIDAI Intelligence System",
     page_icon="🇮🇳",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# Custom Styling with Enhanced UX
+# Custom Styling
 st.markdown("""
 <style>
-    /* Loading Animation */
-    @keyframes pulse {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.5; }
+    .main {
+        background-color: #f8f9fa;
     }
-    
-    .stSpinner > div {
-        animation: pulse 1.5s ease-in-out infinite;
-    }
-    
-    /* Improved Metrics */
     .stMetric {
         background-color: white;
         padding: 15px;
         border-radius: 10px;
-        box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
     }
-    
-    .stMetric:hover {
-        transform: translateY(-2px);
-        box-shadow: 2px 4px 15px rgba(0,0,0,0.15);
-    }
-    
     /* Force text color to black for all metric elements */
     [data-testid="stMetricValue"], 
     [data-testid="stMetricLabel"], 
     [data-testid="stMetricDelta"] {
         color: #000000 !important;
     }
-    
     div[data-testid="metric-container"] * {
         color: #000000 !important;
     }
-    
-    /* Typography */
     h1, h2, h3 {
         color: #2c3e50;
-        font-weight: 600;
     }
-    
-    /* Report Box */
+    .big-font {
+        font-size: 20px !important;
+        font-weight: bold;
+    }
     .report-box {
-        background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+        background-color: #e3f2fd;
         padding: 20px;
         border-radius: 10px;
         border-left: 5px solid #2196f3;
         margin-bottom: 20px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    
-    /* Mobile Responsiveness */
-    @media (max-width: 768px) {
-        .stMetric {
-            padding: 10px;
-        }
-        h1 {
-            font-size: 1.5rem;
-        }
-        .report-box {
-            padding: 15px;
-        }
-    }
-    
-    /* Button Enhancements */
-    .stButton > button {
-        transition: all 0.3s ease;
-    }
-    
-    .stButton > button:hover {
-        transform: scale(1.02);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-    
-    /* Footer */
-    .footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(255, 255, 255, 0.95);
-        padding: 10px;
-        text-align: center;
-        font-size: 0.9rem;
-        border-top: 1px solid #e0e0e0;
-        backdrop-filter: blur(10px);
-        z-index: 999;
-    }
-    
-    .footer a {
-        color: #2196f3;
-        text-decoration: none;
-        font-weight: 600;
-    }
-    
-    .footer a:hover {
-        text-decoration: underline;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -132,7 +58,7 @@ with col_logo:
     st.markdown("<h1>🇮🇳</h1>", unsafe_allow_html=True)
 with col_title:
     st.title("UIDAI Intelligence System")
-    st.caption("Advanced Analytics & Predictive Modeling for Data Hackathon 2026")
+    st.caption("Advanced Analytics & Predictive Modeling for Aadhaar Enrollment Intelligence")
 
 # Sidebar
 st.sidebar.header("🕹️ System Controls")
@@ -297,38 +223,21 @@ if st.sidebar.button("▶️ Run Analysis Pipeline", type="primary"):
             st.error(f"Pipeline Failed: {e}")
             st.exception(e)
 
-st.sidebar.markdown("---")
-st.sidebar.header("👨‍💻 Team Antigravity")
-st.sidebar.caption("Solutions for a Digital India")
-
-# Load Helpers with Enhanced Error Handling
-@st.cache_data(ttl=3600)  # Cache for 1 hour
+# Load Helpers
 def load_latest_report():
-    """Load the most recent intelligence report."""
-    try:
-        report_dir = Path("outputs/reports")
-        if not report_dir.exists(): 
-            return None
-        json_files = list(report_dir.glob("intelligence_report_*.json"))
-        if not json_files: 
-            return None
-        latest_file = max(json_files, key=os.path.getctime)
-        with open(latest_file, 'r', encoding='utf-8') as f: 
-            return json.load(f)
-    except Exception as e:
-        st.error(f"Error loading report: {e}")
-        return None
+    report_dir = Path("outputs/reports")
+    if not report_dir.exists(): return None
+    json_files = list(report_dir.glob("*.json"))
+    if not json_files: return None
+    latest_file = max(json_files, key=os.path.getctime)
+    with open(latest_file, 'r') as f: return json.load(f)
 
-@st.cache_data(ttl=3600)  # Cache for 1 hour
+@st.cache_data
 def load_dataframe():
-    """Load the UIDAI dataset."""
-    try:
-        from utils.data_loader import UidaiDataLoader
-        loader = UidaiDataLoader()
-        return loader.load_all_data()
-    except Exception as e:
-        st.warning(f"Could not load default dataset: {e}")
-        return pd.DataFrame()
+    from utils.data_loader import UidaiDataLoader
+    loader = UidaiDataLoader()
+    try: return loader.load_all_data()
+    except: return pd.DataFrame()
 
 report = load_latest_report()
 df = load_dataframe()
@@ -337,37 +246,24 @@ if not report:
     st.warning("Please run the analysis pipeline to generate intelligence.")
     st.stop()
 
-# Helper for images with caching
+# Helper for images
 vis_dir = Path("outputs/visualizations")
-
-@st.cache_data
-def load_image(filepath):
-    """Cache image loading for better performance."""
-    from PIL import Image
-    return Image.open(filepath)
-
 def show_image(filename, caption):
-    """Display visualization with error handling."""
     path = vis_dir / filename
-    try:
-        if path.exists():
-            img = load_image(str(path))
-            st.image(img, caption=caption, use_container_width=True)
-        else:
-            st.info(f"📊 Visualization '{filename}' will be generated after running analysis.")
-    except Exception as e:
-        st.warning(f"Could not display {filename}: {e}")
+    if path.exists():
+        st.image(str(path), caption=caption, width='stretch')
+    else:
+        st.warning(f"Plot {filename} not generating (Check Data Sufficiency)")
 
 # --- APP TABS ---
 # Executive Brief is Tab 1 (Hackathon Req 11)
-tab_exec, tab_trends, tab_anomalies, tab_forecast, tab_policy, tab_report, tab_raw = st.tabs([
+tab_exec, tab_trends, tab_anomalies, tab_forecast, tab_policy, tab_raw = st.tabs([
     "📋 Executive Brief", 
     "📈 Trends & Demographics", 
     "🔍 Anomaly Detection", 
     "🔮 Forecast", 
     "🛡️ Policy Impact",
-    "� Full Report",
-    "�📝 Raw Data"
+    "📝 Raw Data"
 ])
 
 # --- TAB 1: EXECUTIVE BRIEF ---
@@ -382,8 +278,9 @@ with tab_exec:
         dri = report.get('data_governance', {}).get('dri', {})
         st.metric("Data Reliability (DRI)", f"{dri.get('dri_score', 0)}", delta=dri.get('assessment', 'N/A'))
     with kpi3:
-        # Child-Adult Ratio from new logic
-        ratios = report.get('descriptive_analytics', {}).get('ratios', {})
+        # Child-Adult Ratio from age demographics
+        age_demo = report.get('descriptive_analytics', {}).get('age_demographics', {})
+        ratios = age_demo.get('ratios', {})
         st.metric("Child-Adult Ratio", f"{ratios.get('child_adult_ratio', 'N/A')}", delta=ratios.get('adult_inclusion_gap', ''))
     with kpi4:
         # Surge alert
@@ -488,138 +385,7 @@ with tab_policy:
     st.write(f"**Total New Centers Required:** {res.get('total_required_centers', 0):,}")
     st.write(f"**Additional Staff Needed:** {res.get('total_required_staff', 0):,}")
 
-# --- TAB 6: FULL REPORT ---
-with tab_report:
-    st.subheader("📄 Complete Intelligence Report")
-    
-    # Report file listing
-    report_dir = Path("outputs/reports")
-    
-    col_summary, col_download = st.columns([2, 1])
-    
-    with col_summary:
-        st.markdown("### 📝 Executive Summary")
-        
-        # Find latest executive summary
-        txt_files = list(report_dir.glob("executive_summary_*.txt"))
-        if txt_files:
-            latest_txt = max(txt_files, key=os.path.getctime)
-            with open(latest_txt, 'r', encoding='utf-8') as f:
-                summary_text = f.read()
-            
-            # Display in expandable container
-            with st.expander("View Executive Summary", expanded=True):
-                st.text(summary_text)
-        else:
-            st.info("No executive summary found. Run the pipeline first.")
-    
-    with col_download:
-        st.markdown("### 📥 Download Reports")
-        
-        # PDF download
-        pdf_files = list(report_dir.glob("intelligence_report_*.pdf"))
-        if pdf_files:
-            latest_pdf = max(pdf_files, key=os.path.getctime)
-            with open(latest_pdf, 'rb') as f:
-                pdf_bytes = f.read()
-            st.download_button(
-                "📕 Download PDF Report",
-                pdf_bytes,
-                file_name=latest_pdf.name,
-                mime="application/pdf",
-                use_container_width=True
-            )
-        
-        # JSON download
-        json_files = list(report_dir.glob("intelligence_report_*.json"))
-        if json_files:
-            latest_json = max(json_files, key=os.path.getctime)
-            with open(latest_json, 'r') as f:
-                json_content = f.read()
-            st.download_button(
-                "📊 Download JSON Report",
-                json_content,
-                file_name=latest_json.name,
-                mime="application/json",
-                use_container_width=True
-            )
-        
-        # TXT summary download
-        if txt_files:
-            with open(latest_txt, 'r', encoding='utf-8') as f:
-                txt_content = f.read()
-            st.download_button(
-                "📝 Download Summary (TXT)",
-                txt_content,
-                file_name=latest_txt.name,
-                mime="text/plain",
-                use_container_width=True
-            )
-    
-    st.markdown("---")
-    
-    # Full JSON Report Viewer
-    st.markdown("### 🔍 Interactive Report Explorer")
-    
-    report_sections = [
-        "Select Section...",
-        "📋 Metadata",
-        "🔒 Data Governance",
-        "📊 Descriptive Analytics",
-        "🔍 Anomaly Detection",
-        "🔮 Forecasting",
-        "🛡️ Policy Impact"
-    ]
-    
-    selected_section = st.selectbox("Explore Report Section", report_sections)
-    
-    if selected_section == "📋 Metadata":
-        st.json(report.get('metadata', {}))
-    elif selected_section == "🔒 Data Governance":
-        st.json(report.get('data_governance', {}))
-    elif selected_section == "📊 Descriptive Analytics":
-        # Show summary, not full data
-        desc = report.get('descriptive_analytics', {})
-        st.write("**Coverage:**", desc.get('geographic_patterns', {}).get('coverage', {}))
-        st.write("**Age Demographics:**", desc.get('age_demographics', {}).get('overall', {}))
-        with st.expander("View Full Section"):
-            st.json(desc)
-    elif selected_section == "🔍 Anomaly Detection":
-        anomaly = report.get('anomaly_detection', {})
-        st.write("**Summary:**", anomaly.get('summary', {}))
-        with st.expander("View Full Section"):
-            st.json(anomaly)
-    elif selected_section == "🔮 Forecasting":
-        forecast = report.get('forecasting', {})
-        st.write("**Horizon:**", forecast.get('forecast_horizon', 'N/A'), "months")
-        st.write("**Surge Detected:**", forecast.get('surge_detection', {}).get('surge_detected', False))
-        with st.expander("View Full Section"):
-            st.json(forecast)
-    elif selected_section == "🛡️ Policy Impact":
-        policy = report.get('policy_impact', {})
-        st.write("**Strategic Recommendations:**")
-        for rec in policy.get('strategic_recommendations', [])[:5]:
-            st.markdown(f"- {rec}")
-        with st.expander("View Full Section"):
-            st.json(policy)
-    
-    # List all generated reports
-    st.markdown("---")
-    st.markdown("### 📁 All Generated Reports")
-    
-    all_reports = list(report_dir.glob("*"))
-    if all_reports:
-        report_data = []
-        for rp in sorted(all_reports, key=os.path.getctime, reverse=True):
-            report_data.append({
-                "File": rp.name,
-                "Type": rp.suffix.upper(),
-                "Size": f"{rp.stat().st_size / 1024:.1f} KB",
-                "Created": pd.to_datetime(os.path.getctime(rp), unit='s').strftime('%Y-%m-%d %H:%M')
-            })
-        st.dataframe(pd.DataFrame(report_data), use_container_width=True, hide_index=True)
-
-# --- TAB 7: RAW DATA ---
+# --- TAB 6: RAW DATA ---
 with tab_raw:
     st.markdown("### Filtered Dataset")
     
@@ -638,29 +404,8 @@ with tab_raw:
         
     st.dataframe(filt_df)
     st.download_button("Download Data CSV", filt_df.to_csv(index=False), "filtered_data.csv")
+    st.json(report)
 
-# Enhanced Footer with GitHub Link
+# Footer
 st.markdown("---")
-
-footer_col1, footer_col2, footer_col3 = st.columns([1, 2, 1])
-
-with footer_col1:
-    st.caption("🇮🇳 UIDAI Intelligence System v2.0")
-
-with footer_col2:
-    st.caption("Built with ❤️ by [Mayank Sharma](https://mayyanks.app) | IIT Jodhpur")
-
-with footer_col3:
-    st.caption("⭐ [GitHub](https://github.com/Mayank-iitj/UIDAI-ms)")
-
-st.caption("")
-st.markdown(
-    """
-    <div class="footer">
-        Developed by <a href="https://mayyanks.app" target="_blank">Mayank Sharma</a> (IIT Jodhpur) | 
-        <a href="https://github.com/Mayank-iitj/UIDAI-ms" target="_blank">⭐ Star on GitHub</a> | 
-        UIDAI Data Hackathon 2026
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+st.caption("UIDAI Intelligence System v2.0 | Production Build")
